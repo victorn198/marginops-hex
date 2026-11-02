@@ -1,6 +1,8 @@
 # MarginOps — Inteligência Comercial e Rentabilidade no Hex
 
-Projeto empresarial de portfólio por Victor Nogueira, desenvolvido para SQL, Python e aplicativos nativos do Hex.
+Projeto empresarial de portfólio por Victor Nogueira, desenvolvido com SQL, Python e células nativas do Hex.
+
+**[Abrir aplicativo publicado no Hex](https://app.hex.tech/019fb7c2-0139-75db-a781-a6d19adf4a2e/app/034qivrUc5i5OGHBvR7b6o/latest)** · [Caso de negócio e resultados](docs/business-case-study.md)
 
 ## Decisão de negócio
 
@@ -19,7 +21,7 @@ Não representa resultados de uma empresa real. As análises são calculadas sob
 - Prioridades comerciais por categoria, produto, mercado e canal.
 - Coortes de clientes com maturidade explícita e contexto de aquisição.
 - Previsão semanal com validação temporal e comparação contra referência sazonal.
-- Simulador de desconto adicional, aumento de custo e volume necessário para preservar a margem.
+- Simulador de desconto adicional, aumento de custo e volume necessário para preservar o lucro bruto.
 - Reconciliação entre vendas e pedidos/itens, unicidade de chaves, integridade dos relacionamentos e conferência monetária.
 - Dicionário das métricas, origem, limites e regras de conversão de moeda.
 
@@ -27,7 +29,9 @@ A base não contém posição de estoque, contas a pagar/receber ou despesas ope
 
 ## Uso no Hex
 
-O aplicativo usa células de SQL, Python, entradas, indicadores, gráficos, tabelas e abas. O arquivo `.hex.yaml` será validado contra o esquema público oficial. O funcionamento em nuvem e o compartilhamento público serão verificados antes de apresentar o projeto como publicado.
+O aplicativo publicado usa seis abas, células de SQL, Python, entradas, indicadores, gráficos nativos, pivot e gráficos Plotly. Escolha os filtros ou as premissas e clique em **Run** para recalcular o conjunto; aguarde a conclusão antes de interpretar os resultados. A atualização explícita evita execuções sobrepostas ao alterar vários campos.
+
+O código e o layout nativos estão no projeto Hex. Este repositório contém o snapshot, a preparação, os cálculos independentes, os relatórios de verificação e a documentação. O download do export nativo YAML não foi recuperado nesta sessão e, portanto, esse export não foi validado nem está incluído aqui.
 
 Os dados de publicação estão em `data/published/`. As tabelas são lidas de forma seletiva, sem materializar milhões de linhas desnecessariamente em dataframes. A projeção de clientes elimina nomes, endereços e outros atributos sem uso analítico.
 

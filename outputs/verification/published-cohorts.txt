@@ -1,0 +1,203 @@
+- generic: Visão executiva
+- generic: Motores de resultado
+- generic [active]: Clientes e coortes
+- generic: Previsão e validação
+- generic: Simulador de margem
+- generic: Qualidade e metodologia
+- button "Run":
+  - generic: Run
+- button:
+- 'heading "Clientes e coortes — corte 2025, mercado: Todos" [level=2]':
+  - text: "Clientes e coortes — corte 2025, mercado: Todos"
+  - link:
+    - /url: "#clientes-e-coortes--corte-2025-mercado-todos"
+- blockquote:
+  - paragraph:
+    - strong: "Escopo desta aba:"
+    - text: o filtro de
+    - strong: categoria NÃO se aplica
+    - text: "(seleção atual: Todas); valem apenas o ano de corte e o mercado."
+    - strong: Cliente = CustomerKey
+    - text: "(convenção por registro): a projeção publicada não tem identidade persistente de pessoa, então a retenção"
+    - strong: não é garantidamente deduplicada por pessoa física
+    - text: entre versões SCD. Nenhuma chave natural foi inventada a partir de dados demográficos ou endereço.
+- generic "Nota de coortes"
+- paragraph:
+  - strong: Regra das coortes.
+  - text: Cliente = CustomerKey (registro, não pessoa física). A coorte é o ano da
+  - strong: primeira compra em todo o histórico disponível
+  - text: até 31/12 do ano de corte selecionado (não a primeira compra dentro do ano). Denominador = clientes iniciais da coorte; numerador = clientes da coorte com ao menos um pedido no ano de idade
+  - emphasis: k
+  - text: . Idades além do corte não são exibidas. Recompra em 365 dias só aparece quando todos os clientes da coorte tiveram 365 dias de observação. O filtro de
+  - strong: mercado
+  - text: se aplica (país do cliente); o filtro de
+  - strong: categoria não
+  - text: se aplica, pois aquisição e recompra são definidas pelo relacionamento total.
+  - emphasis: "A coorte 2016 é censurada à esquerda: o histórico começa em 18/05/2016, então parte desses clientes pode ter comprado antes."
+- generic "17. Mapa de calor de coortes (idades imaturas em branco)"
+- iframe:
+  - toolbar:
+    - button "Download plot as a PNG":
+    - button "Zoom":
+    - button "Pan":
+    - button "Zoom in":
+    - button "Zoom out":
+    - button "Autoscale":
+    - button "Reset axes":
+    - link "plotly-logomark":
+      - /url: https://plotly.com/
+      - img "plotly-logomark"
+- button:
+- button:
+- generic "Recompra em até 365 dias por coorte de aquisição"
+- generic "Vega visualization"
+- button:
+- generic "16. Recompra em até 365 dias por coorte (mascarada se imatura)"
+- treegrid:
+  - rowgroup:
+    - row "coorte coorte_rotulo clientes_iniciais maturada recompra_365d recompra_ate_corte":
+      - columnheader: 
+      - columnheader "coorte":
+        - text: 
+        - button "coorte":
+          - generic "coorte":
+            - text: coorte
+      - columnheader "coorte_rotulo":
+        - text: 
+        - button "coorte_rotulo":
+          - generic "coorte_rotulo":
+            - text: coorte_rotulo
+      - columnheader "clientes_iniciais":
+        - text: 
+        - button "clientes_iniciais":
+          - generic "clientes_iniciais":
+            - text: clientes_iniciais
+      - columnheader "maturada":
+        - text: 
+        - button "maturada":
+          - generic "maturada":
+            - text: maturada
+      - columnheader "recompra_365d":
+        - text: 
+        - button "recompra_365d":
+          - generic "recompra_365d":
+            - text: recompra_365d
+      - columnheader "recompra_ate_corte":
+        - text: 
+        - button "recompra_ate_corte":
+          - generic "recompra_ate_corte":
+            - text: recompra_ate_corte
+      - columnheader: 
+  - rowgroup:
+    - row "0 2016 2016* 20458 True 0.4058070192589696 0.9704272167367289":
+      - gridcell "0"
+      - gridcell "2016"
+      - gridcell "2016*":
+        - generic: 2016*
+      - gridcell "20458"
+      - gridcell "True"
+      - gridcell "0.4058070192589696"
+      - gridcell "0.9704272167367289"
+      - gridcell
+    - row "1 2017 2017 22969 True 0.4244851756715573 0.968435717706474":
+      - gridcell "1"
+      - gridcell "2017"
+      - gridcell "2017":
+        - generic: "2017"
+      - gridcell "22969"
+      - gridcell "True"
+      - gridcell "0.4244851756715573"
+      - gridcell "0.968435717706474"
+      - gridcell
+    - row "2 2018 2018 16519 True 0.5399842605484594 0.9633755069919486":
+      - gridcell "2"
+      - gridcell "2018"
+      - gridcell "2018":
+        - generic: "2018"
+      - gridcell "16519"
+      - gridcell "True"
+      - gridcell "0.5399842605484594"
+      - gridcell "0.9633755069919486"
+      - gridcell
+    - row "3 2019 2019 13562 True 0.6022710514673352 0.9470579560536794":
+      - gridcell "3"
+      - gridcell "2019"
+      - gridcell "2019":
+        - generic: "2019"
+      - gridcell "13562"
+      - gridcell "True"
+      - gridcell "0.6022710514673352"
+      - gridcell "0.9470579560536794"
+      - gridcell
+    - row "4 2020 2020 4348 True 0.3452161913523459 0.9038638454461821":
+      - gridcell "4"
+      - gridcell "2020"
+      - gridcell "2020":
+        - generic: "2020"
+      - gridcell "4348"
+      - gridcell "True"
+      - gridcell "0.3452161913523459"
+      - gridcell "0.9038638454461821"
+      - gridcell
+    - row "5 2021 2021 2638 True 0.40636846095526913 0.8726307808946171":
+      - gridcell "5"
+      - gridcell "2021"
+      - gridcell "2021":
+        - generic: "2021"
+      - gridcell "2638"
+      - gridcell "True"
+      - gridcell "0.40636846095526913"
+      - gridcell "0.8726307808946171"
+      - gridcell
+    - row "6 2022 2022 2308 True 0.4809358752166378 0.8145580589254766":
+      - gridcell "6"
+      - gridcell "2022"
+      - gridcell "2022":
+        - generic: "2022"
+      - gridcell "2308"
+      - gridcell "True"
+      - gridcell "0.4809358752166378"
+      - gridcell "0.8145580589254766"
+      - gridcell
+    - row "7 2023 2023 2273 True 0.4527056753189617 0.6968763748350199":
+      - gridcell "7"
+      - gridcell "2023"
+      - gridcell "2023":
+        - generic: "2023"
+      - gridcell "2273"
+      - gridcell "True"
+      - gridcell "0.4527056753189617"
+      - gridcell "0.6968763748350199"
+      - gridcell
+    - row "8 2024 2024 1102 True 0.32667876588021777 0.4473684210526316":
+      - gridcell "8"
+      - gridcell "2024"
+      - gridcell "2024":
+        - generic: "2024"
+      - gridcell "1102"
+      - gridcell "True"
+      - gridcell "0.32667876588021777"
+      - gridcell "0.4473684210526316"
+      - gridcell
+    - row "9 2025 2025 731 False null 0.17373461012311903":
+      - gridcell "9"
+      - gridcell "2025"
+      - gridcell "2025":
+        - generic: "2025"
+      - gridcell "731"
+      - gridcell "False"
+      - gridcell "null"
+      - gridcell "0.17373461012311903"
+      - gridcell
+  - rowgroup
+  - rowgroup
+  - rowgroup
+- text:    
+- button "10 rows":
+  - generic: 10 rows
+- link:
+  - /url: /019fb7c2-0139-75db-a781-a6d19adf4a2e/home
+- link "MarginOps | Inteligência Comercial e Rentabilidade":
+  - /url: /019fb7c2-0139-75db-a781-a6d19adf4a2e/app/MarginOps-Inteligncia-Comercial-e-Rentabilidade-034qivrUc5i5OGHBvR7b6o/5/01a19da0-2c0b-7662-b2f7-52162c4763a6
+- generic: Edited 5 min ago
+- generic: Anyone

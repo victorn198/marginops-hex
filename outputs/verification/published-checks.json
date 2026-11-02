@@ -1,0 +1,52 @@
+{
+  "checked_on": "2026-11-02",
+  "app_url": "https://app.hex.tech/019fb7c2-0139-75db-a781-a6d19adf4a2e/app/034qivrUc5i5OGHBvR7b6o/latest",
+  "company": "Fictitious Contoso / SQLBI, synthetic data",
+  "source_sales_rows": 2349091,
+  "source_distinct_orders": 980666,
+  "source_tables": 8,
+  "publication_preview": "Fresh execution completed, Publish app enabled, all 24 integrity checks and 21 reference checks passed in native output.",
+  "interactive_scenario_preview": {
+    "additional_discount_pct": 5,
+    "cost_increase_pct": 10,
+    "assumed_volume_increase_pct": 15,
+    "displayed_gross_profit_million_usd": 160.9,
+    "displayed_gp_delta_million_usd": -7.2,
+    "required_volume_pct": 20.1
+  },
+  "published_manual_2024": {
+    "ridge_wape": 0.2457029451578028,
+    "seasonal_wape": 0.4219142516076045,
+    "kpi_display": [
+      "24,6%",
+      "42,2%"
+    ],
+    "table_and_narrative_match": true
+  },
+  "execution_mode": "Manual Run after configuring filters or scenarios. Chosen after rapid auto-rerun testing exposed stale mixed outputs. Full Run was tested and matched KPI/table/narrative.",
+  "access": "Anyone with link: Can view app; owner retains Full access. Workspace Can view app.",
+  "embed_url_verified_from_native_share": "https://app.hex.tech/019fb7c2-0139-75db-a781-a6d19adf4a2e/app/034qivrUc5i5OGHBvR7b6o/latest?embedded=true",
+  "limitations": [
+    "Native YAML export download not recovered or schema-validated.",
+    "Signed-in public app and native sharing permissions verified; independent anonymous JavaScript browser session unavailable.",
+    "No valid source filter combination is empty and UI slider limits do not reach nonpositive unit contribution; these paths were not exercised through app inputs.",
+    "English portfolio links to a Portuguese Hex app."
+  ],
+  "published_manual_2025": {
+    "ridge_wape_display": "8,6%",
+    "seasonal_wape_display": "4,4%",
+    "table_and_narrative_match": true
+  },
+  "portfolio_integration": {
+    "pages": [
+      "pt",
+      "en",
+      "pt-recruiter",
+      "en-recruiter"
+    ],
+    "interactive_demos": 6,
+    "local_browser_embed_passed": true,
+    "existing_signalpath_switch_passed": true,
+    "no_horizontal_overflow_at_tested_viewport": true
+  }
+}

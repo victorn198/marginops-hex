@@ -1,0 +1,167 @@
+- button:
+- link:
+  - /url: /019fb7c2-0139-75db-a781-a6d19adf4a2e/home
+- button "Just now":
+  - generic: Just now
+- button:
+- button:
+- button "Edit":
+  - generic: Edit
+- button "Share":
+  - generic: Share
+- button:
+- button "Open agent":
+- generic: Visão executiva
+- generic: Motores de resultado
+- generic: Clientes e coortes
+- generic [active]: Previsão e validação
+- generic: Simulador de margem
+- generic: Qualidade e metodologia
+- button:
+- 'heading "Previsão e validação — Ano 2024 · Mercado: Todos · Categoria: Todas" [level=2]':
+  - text: "Previsão e validação — Ano 2024 · Mercado: Todos · Categoria: Todas"
+  - link:
+    - /url: "#previsão-e-validação--ano-2024--mercado-todos--categoria-todas"
+- paragraph: Previsão de 4 semanas da receita líquida semanal a partir da última semana completa até o corte selecionado, comparada a uma referência sazonal de 52 semanas.
+- button:
+- generic "KPI WAPE ridge"
+- generic: 24,6%
+- generic "WAPE ridge AR (validação)"
+- button:
+- generic "KPI WAPE baseline"
+- generic: 42,2%
+- generic "WAPE sazonal ingênuo 52s (validação)"
+- button:
+- generic "20. Gráfico de previsão e validação"
+- iframe:
+  - toolbar:
+    - button "Download plot as a PNG":
+    - button "Zoom":
+    - button "Pan":
+    - button "Box Select":
+    - button "Lasso Select":
+    - button "Zoom in":
+    - button "Zoom out":
+    - button "Autoscale":
+    - button "Reset axes":
+    - link "plotly-logomark":
+      - /url: https://plotly.com/
+      - img "plotly-logomark"
+- button:
+- button:
+- generic "21. Tabela de previsão (4 semanas)"
+- treegrid:
+  - rowgroup:
+    - row "semana previsao_ridge_ar_usd previsao_sazonal_ingenua_usd":
+      - columnheader: 
+      - columnheader "semana":
+        - text: 
+        - button "semana":
+          - generic "semana":
+            - text: semana
+      - columnheader "previsao_ridge_ar_usd":
+        - text: 
+        - button "previsao_ridge_ar_usd":
+          - generic "previsao_ridge_ar_usd":
+            - text: previsao_ridge_ar_usd
+      - columnheader "previsao_sazonal_ingenua_usd":
+        - text: 
+        - button "previsao_sazonal_ingenua_usd":
+          - generic "previsao_sazonal_ingenua_usd":
+            - text: previsao_sazonal_ingenua_usd
+      - columnheader: 
+  - rowgroup:
+    - row "0 2024-12-30T00:00:00 8193596.500139062 9379890.09084":
+      - gridcell "0"
+      - gridcell "2024-12-30T00:00:00"
+      - gridcell "8193596.500139062"
+      - gridcell "9379890.09084"
+      - gridcell
+    - row "1 2025-01-06T00:00:00 8136577.598379667 7722733.94572":
+      - gridcell "1"
+      - gridcell "2025-01-06T00:00:00"
+      - gridcell "8136577.598379667"
+      - gridcell "7722733.94572"
+      - gridcell
+    - row "2 2025-01-13T00:00:00 7945682.19059319 7435786.5268":
+      - gridcell "2"
+      - gridcell "2025-01-13T00:00:00"
+      - gridcell "7945682.19059319"
+      - gridcell "7435786.5268"
+      - gridcell
+    - row "3 2025-01-20T00:00:00 7672581.698811095 7148127.76448":
+      - gridcell "3"
+      - gridcell "2025-01-20T00:00:00"
+      - gridcell "7672581.698811095"
+      - gridcell "7148127.76448"
+      - gridcell
+  - rowgroup
+  - rowgroup
+  - rowgroup
+- text:    
+- button "4 rows":
+  - generic: 4 rows
+- button:
+- button:
+- generic "22. Métricas de validação (WAPE/MAE)"
+- treegrid:
+  - rowgroup:
+    - row "modelo wape mae_usd":
+      - columnheader: 
+      - columnheader "modelo":
+        - text: 
+        - button "modelo":
+          - generic "modelo":
+            - text: modelo
+      - columnheader "wape":
+        - text: 
+        - button "wape":
+          - generic "wape":
+            - text: wape
+      - columnheader "mae_usd":
+        - text: 
+        - button "mae_usd":
+          - generic "mae_usd":
+            - text: mae_usd
+      - columnheader: 
+  - rowgroup:
+    - row "0 Ridge autorregressivo 0.2457029451578028 1449167.705115591":
+      - gridcell "0"
+      - gridcell "Ridge autorregressivo"
+      - gridcell "0.2457029451578028"
+      - gridcell "1449167.705115591"
+      - gridcell
+    - row "1 Sazonal ingênuo (52 semanas) 0.4219142516076045 2488470.406266667":
+      - gridcell "1"
+      - gridcell "Sazonal ingênuo (52 semanas)"
+      - gridcell "0.4219142516076045"
+      - gridcell "2488470.406266667"
+      - gridcell
+  - rowgroup
+  - rowgroup
+  - rowgroup
+- text:    
+- button "2 rows":
+  - generic: 2 rows
+- button:
+- generic "Nota de previsão"
+- paragraph:
+  - strong: Resultado da validação.
+  - text: "6 origens × 4 semanas. WAPE ridge AR = 24,6% · WAPE sazonal ingênuo = 42,2%. Menor erro neste recorte:"
+  - strong: Ridge autorregressivo
+  - text: .
+- paragraph:
+  - strong: Método.
+  - text: Série de receita líquida semanal (segunda a domingo), apenas semanas completas até o corte.
+  - emphasis: Ridge autorregressivo
+  - text: "em numpy com λ fixo = 1: log(1+receita) das 4 semanas anteriores, média dessas 4, valor de 52 semanas antes, termos de calendário (seno/cosseno da semana do ano, 2 harmônicos) e tendência; features padronizadas só com dados de treino. Em cada origem o modelo é re-treinado apenas com o passado e prevê 4 semanas"
+  - strong: recursivamente
+  - text: (semanas 2–4 usam lags previstos, nunca valores reais futuros).
+  - emphasis: Referência sazonal ingênua
+  - text: ": valor da mesma semana 52 semanas antes (fallback: último valor observado se não houver 52 semanas). WAPE = Σ|erro| / Σ|real|; MAE em USD."
+- paragraph:
+  - strong: Limites.
+  - text: Sem intervalos de confiança formais, sem efeitos causais e sem pretensão de uso em produção; com 24 pontos de validação, diferenças pequenas de WAPE não são conclusivas.
+- button "Run":
+  - generic: Run
+- button:

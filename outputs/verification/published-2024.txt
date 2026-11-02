@@ -1,0 +1,134 @@
+- button:
+- link:
+  - /url: /019fb7c2-0139-75db-a781-a6d19adf4a2e/home
+- button "Just now":
+  - generic: Just now
+- button:
+- button:
+- button "Edit":
+  - generic: Edit
+- button "Share":
+  - generic: Share
+- button:
+- button "Open agent":
+- generic: Visão executiva
+- generic: Motores de resultado
+- generic: Clientes e coortes
+- generic: Previsão e validação
+- generic: Simulador de margem
+- generic: Qualidade e metodologia
+- button:
+- generic "Introdução"
+- heading "MarginOps" [level=1]:
+  - text: MarginOps
+  - link:
+    - /url: "#marginops"
+- heading "Inteligência comercial e rentabilidade" [level=3]:
+  - text: Inteligência comercial e rentabilidade
+  - link:
+    - /url: "#inteligência-comercial-e-rentabilidade"
+- paragraph: Explore o que move a receita, o lucro bruto e as decisões de desconto de uma empresa.
+- paragraph:
+  - strong: 2,35 milhões de itens vendidos · 8 tabelas relacionadas
+- paragraph:
+  - emphasis: Por Victor Nogueira · Dados sintéticos Contoso/SQLBI · Valores em USD
+- button:
+- 'heading "Visão executiva — Ano 2024 · Mercado: Todos · Categoria: Todas" [level=2]':
+  - text: "Visão executiva — Ano 2024 · Mercado: Todos · Categoria: Todas"
+  - link:
+    - /url: "#visão-executiva--ano-2024--mercado-todos--categoria-todas"
+- paragraph:
+  - text: Comparação com o
+  - strong: ano anterior completo
+  - text: (2023). Valores em USD (moeda-base do conjunto). Dados sintéticos Contoso (SQLBI, MIT).
+- button:
+- generic "Ano"
+- button "2024" [active]:
+  - generic: "2024"
+- button:
+- generic "Mercado (país do cliente)"
+- button "Todos":
+  - generic: Todos
+- button:
+- generic "Categoria"
+- button "Todas":
+  - generic: Todas
+- button "Ask" [disabled]:
+  - generic: Ask
+- button:
+- button:
+- generic "KPI Receita líquida"
+- generic: $ 325,0 mi
+- generic "Receita líquida (USD)"
+- generic "-27.69% vs ano anterior":
+  - text: "-27.69% vs ano anterior"
+- button:
+- generic "KPI Lucro bruto"
+- generic: $ 181,7 mi
+- generic "Lucro bruto (USD)"
+- generic "-27.7% vs ano anterior":
+  - text: "-27.7% vs ano anterior"
+- button:
+- generic "KPI Margem bruta"
+- generic: 55,9%
+- generic "Margem bruta"
+- button:
+- generic "KPI Pedidos"
+- generic: "163.695"
+- generic "Pedidos distintos"
+- generic "-16.58% vs ano anterior":
+  - text: "-16.58% vs ano anterior"
+- button:
+- generic "KPI Ticket médio"
+- generic: $ 1.986
+- generic "Ticket médio por pedido (USD)"
+- generic "-13.32% vs ano anterior":
+  - text: "-13.32% vs ano anterior"
+- button:
+- generic "Resumo executivo (app)"
+- heading "Leitura do recorte atual" [level=3]:
+  - text: Leitura do recorte atual
+  - link:
+    - /url: "#leitura-do-recorte-atual"
+- paragraph:
+  - strong: "Ano 2024 · Mercado: Todos · Categoria: Todas"
+- list:
+  - listitem: Receita líquida recuou −27,7% vs 2023 (USD 325,0 mi); o lucro bruto acompanhou na mesma direção (−27,7%). Margem bruta 55,9% (−1 p.b. vs 2023).
+  - listitem: "Pedidos distintos: 163.695 (−16,6%); ticket médio USD 1.986; desconto médio 5,9% da receita bruta."
+  - text: "Por categoria: pior variação de lucro bruto em"
+  - strong: Computers
+  - text: (−USD 35,8 mi); melhor variação em
+  - strong: Games and Toys
+  - text: (−USD 196.201).
+  - text: "Por mercado: pior variação de lucro bruto em"
+  - strong: United States
+  - text: (−USD 45,6 mi); melhor variação em
+  - strong: Italy
+  - text: (−USD 1,2 mi).
+  - text: "Por canal: pior variação de lucro bruto em"
+  - strong: Loja física
+  - text: (−USD 43,4 mi); melhor variação em
+  - strong: Online
+  - text: (−USD 26,3 mi).
+  - listitem: "Leitura: variações descrevem o histórico do recorte; não são efeitos causais nem ganhos garantidos."
+- button:
+- button:
+- generic "Receita líquida e lucro bruto por mês — ano selecionado vs anterior"
+- generic "Vega visualization"
+- generic: Série
+- generic: Lucro bruto 2023
+- generic: Lucro bruto 2024
+- generic: Receita líquida 2023
+- generic: Receita líquida 2024
+- button:
+- button:
+- generic "Variação do lucro bruto por categoria vs ano anterior"
+- generic "Vega visualization"
+- button:
+- button:
+- generic "Variação do lucro bruto por mercado vs ano anterior"
+- generic "Vega visualization"
+- alert:
+  - text: Still loading...
+  - button "Dismiss":
+    - generic: Dismiss

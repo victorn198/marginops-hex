@@ -1,0 +1,696 @@
+- text: Publish app
+- button "App preview":
+  - generic: App preview
+- button "Notebook diff":
+  - generic: Notebook diff
+- button:
+- button:
+- generic: Visão executiva
+- generic: Motores de resultado
+- generic: Clientes e coortes
+- generic: Previsão e validação
+- generic: Simulador de margem
+- generic [active]: Qualidade e metodologia
+- heading "Principais achados — seleção de referência fixa (2025 vs 2024, todos os mercados e categorias)" [level=3]:
+  - text: Principais achados — seleção de referência fixa (2025 vs 2024, todos os mercados e categorias)
+  - link:
+    - /url: "#principais-achados--seleção-de-referência-fixa-2025-vs-2024-todos-os-mercados-e-categorias"
+- paragraph:
+  - emphasis: Este texto descreve só esta seleção fixa, validada contra a referência independente (célula 29); ele não muda com os filtros.
+- list:
+  - strong: "O crescimento não está gerando lucro bruto, porque não há crescimento:"
+  - text: a receita líquida caiu 7,7% (USD 325,0 mi → 299,9 mi) e o lucro bruto caiu 7,5% (USD 181,7 mi → 168,1 mi). A margem bruta ficou praticamente estável (55,9% → 56,0%), então o problema é escala, não rentabilidade unitária.
+  - strong: "Mix explica a maior parte da queda:"
+  - text: dos −USD 25,1 mi, o mix responde por −21,8 mi, o volume por −3,4 mi e o preço por +0,1 mi. A participação migrou para produtos de menor preço médio. É uma atribuição aritmética (Shapley), não uma causa.
+  - strong: "Onde olhar:"
+  - text: TV and Video, Home Appliances e Computers concentram a perda de lucro bruto; os Estados Unidos e o canal Online respondem pela maior parte da queda; Alemanha e lojas físicas cresceram.
+  - strong: "Desconto vs volume:"
+  - text: 5% de desconto adicional com 10% de custo a mais exige +20,1% de volume só para manter o lucro bruto.
+  - strong: "Previsão:"
+  - text: a referência sazonal de 52 semanas (WAPE 4,4%) venceu o ridge autorregressivo (8,6%). Para planejamento de curto prazo, a referência simples é a escolha defensável.
+- paragraph:
+  - strong: "Limitações verificadas:"
+  - text: dados sintéticos; sem estoque, contas a receber/pagar, despesas fixas ou SLA, logo sem lucro líquido, caixa ou atrasos; coortes por CustomerKey, sem deduplicação por pessoa; coorte 2016 censurada à esquerda; o volume do simulador é premissa, não elasticidade.
+- generic "Metodologia (app)"
+- heading "Qualidade e metodologia" [level=2]:
+  - text: Qualidade e metodologia
+  - link:
+    - /url: "#qualidade-e-metodologia"
+- paragraph:
+  - strong: Fonte.
+  - text: SQLBI
+  - emphasis: Contoso Data Generator V2
+  - text: — conjunto "Contoso 1M" (
+  - link "release":
+    - /url: https://github.com/sql-bi/Contoso-Data-Generator-V2-Data/releases/tag/ready-to-use-data
+  - text: ", licença MIT), convertido em 8 arquivos Parquet no snapshot"
+  - link "victorn198/marginops-hex @ eb9985f":
+    - /url: https://github.com/victorn198/marginops-hex/tree/eb9985f/data/published
+  - text: (
+  - link "manifest.json":
+    - /url: https://raw.githubusercontent.com/victorn198/marginops-hex/eb9985f/data/published/manifest.json
+  - text: "). Período:"
+  - strong: 18/05/2016 a 31/12/2025
+  - text: ; 2.349.091 linhas de venda, 980.666 pedidos.
+  - strong: Empresa e clientes são fictícios
+  - text: ; os dados de cliente foram projetados para chaves, datas SCD e campos geográficos. Este projeto não representa trabalho para cliente, dados de produção nem impacto de negócio realizado.
+- paragraph:
+  - strong: "Status das verificações:"
+  - text: 24 verificações de integridade aprovadas; hashes SHA256 conferidos para 8 arquivos; preços e custos em USD (razão = 1 nas 5 moedas).
+- paragraph:
+  - strong: Moeda.
+  - text: O gerador (
+  - link "Engine.cs":
+    - /url: https://github.com/sql-bi/Contoso-Data-Generator-V2/blob/main/DatabaseGenerator/Engine.cs
+  - text: ","
+  - emphasis: BuildSaleItems
+  - text: ) constrói UnitPrice, NetPrice e UnitCost a partir dos preços-base do produto
+  - strong: sem
+  - text: aplicar ExchangeRate. Por isso todos os valores consolidados ficam em
+  - strong: USD
+  - text: e não são divididos pela taxa; a tabela de moedas confirma razão = 1 entre preço/custo transacionado e cadastro nas 5 moedas. ExchangeRate (USD → moeda do pedido) não é usado nos consolidados.
+- paragraph:
+  - strong: Grão e reconciliação.
+  - text: "Grão principal:"
+  - code: OrderKey + LineNumber
+  - text: em
+  - emphasis: sales
+  - text: .
+  - emphasis: orders + orderrows
+  - text: (grão
+  - code: OrderKey + RowNumber
+  - text: ") é uma representação equivalente: foi reconciliada linha a linha e em valores, e"
+  - strong: não
+  - text: é somada a
+  - emphasis: sales
+  - text: . Todos os joins são muitos-para-um, sem órfãos e sem perda/duplicação de linhas; nenhuma linha foi excluída.
+- paragraph:
+  - strong: Dicionário de métricas.
+- table:
+  - rowgroup:
+    - row "Métrica Definição":
+      - columnheader "Métrica"
+      - columnheader "Definição"
+  - rowgroup:
+    - row "Receita bruta Σ Quantity × UnitPrice":
+      - cell "Receita bruta"
+      - cell "Σ Quantity × UnitPrice"
+    - row "Receita líquida Σ Quantity × NetPrice":
+      - cell "Receita líquida"
+      - cell "Σ Quantity × NetPrice"
+    - row "Descontos Receita bruta − receita líquida":
+      - cell "Descontos"
+      - cell "Receita bruta − receita líquida"
+    - row "CPV Σ Quantity × UnitCost (custo histórico da transação, não o custo atual do cadastro)":
+      - cell "CPV"
+      - cell "Σ Quantity × UnitCost (custo histórico da transação, não o custo atual do cadastro)"
+    - row "Lucro bruto Receita líquida − CPV (não é EBITDA nem lucro líquido)":
+      - cell "Lucro bruto"
+      - cell "Receita líquida − CPV (não é EBITDA nem lucro líquido)"
+    - row "Margem bruta Lucro bruto ÷ receita líquida (razão de somas, nunca média de margens por linha)":
+      - cell "Margem bruta"
+      - cell "Lucro bruto ÷ receita líquida (razão de somas, nunca média de margens por linha)"
+    - row "Pedidos COUNT(DISTINCT OrderKey) no escopo filtrado ativo":
+      - cell "Pedidos"
+      - cell "COUNT(DISTINCT OrderKey) no escopo filtrado ativo"
+    - row "Canal Online = StoreKey 999999 (\"Online store\" no cadastro de lojas); demais = loja física":
+      - cell "Canal"
+      - cell "Online = StoreKey 999999 (\"Online store\" no cadastro de lojas); demais = loja física":
+        - emphasis: Online
+        - text: = StoreKey 999999 ("Online store" no cadastro de lojas); demais = loja física
+    - row "Mercado País do cliente (CountryFull)":
+      - cell "Mercado"
+      - cell "País do cliente (CountryFull)"
+    - row "Dias de entrega DeliveryDate − OrderDate, duração observada (0 a 21 dias); não há SLA prometido":
+      - cell "Dias de entrega"
+      - cell "DeliveryDate − OrderDate, duração observada (0 a 21 dias); não há SLA prometido"
+- paragraph:
+  - strong: Limitações.
+  - text: "Não há saldos de estoque, contas a receber/pagar, despesas operacionais fixas nem SLA de entrega: o projeto não calcula lucro líquido, fluxo de caixa ou atrasos. Comparações ano a ano usam anos completos (o escopo permite 2023–2025). Coorte 2016 censurada à esquerda. Previsão e simulador são exercícios analíticos, não recomendações garantidas."
+- generic "29. Validação contra referência independente (6af579b)"
+- table:
+  - rowgroup:
+    - row "verificacao obtido referencia tolerancia ok":
+      - columnheader
+      - columnheader "verificacao"
+      - columnheader "obtido"
+      - columnheader "referencia"
+      - columnheader "tolerancia"
+      - columnheader "ok"
+  - rowgroup:
+    - row "0 Linhas 2025 3.885440e+05 3.885440e+05 5.000000e-01 True":
+      - columnheader "0"
+      - columnheader "Linhas 2025"
+      - columnheader "3.885440e+05"
+      - columnheader "3.885440e+05"
+      - columnheader "5.000000e-01"
+      - columnheader "True"
+    - row "1 Pedidos distintos 2025 1.618020e+05 1.618020e+05 5.000000e-01 True":
+      - columnheader "1"
+      - columnheader "Pedidos distintos 2025"
+      - columnheader "1.618020e+05"
+      - columnheader "1.618020e+05"
+      - columnheader "5.000000e-01"
+      - columnheader "True"
+    - row "2 Unidades 2025 1.222215e+06 1.222215e+06 5.000000e-01 True":
+      - columnheader "2"
+      - columnheader "Unidades 2025"
+      - columnheader "1.222215e+06"
+      - columnheader "1.222215e+06"
+      - columnheader "5.000000e-01"
+      - columnheader "True"
+    - row "3 Receita bruta 2025 3.187317e+08 3.187317e+08 1.000000e-02 True":
+      - columnheader "3"
+      - columnheader "Receita bruta 2025"
+      - columnheader "3.187317e+08"
+      - columnheader "3.187317e+08"
+      - columnheader "1.000000e-02"
+      - columnheader "True"
+    - row "4 Receita líquida 2025 2.999462e+08 2.999462e+08 1.000000e-02 True":
+      - columnheader "4"
+      - columnheader "Receita líquida 2025"
+      - columnheader "2.999462e+08"
+      - columnheader "2.999462e+08"
+      - columnheader "1.000000e-02"
+      - columnheader "True"
+    - row "5 CPV 2025 1.318626e+08 1.318626e+08 1.000000e-02 True":
+      - columnheader "5"
+      - columnheader "CPV 2025"
+      - columnheader "1.318626e+08"
+      - columnheader "1.318626e+08"
+      - columnheader "1.000000e-02"
+      - columnheader "True"
+    - row "6 Descontos 2025 1.878553e+07 1.878553e+07 1.000000e-02 True":
+      - columnheader "6"
+      - columnheader "Descontos 2025"
+      - columnheader "1.878553e+07"
+      - columnheader "1.878553e+07"
+      - columnheader "1.000000e-02"
+      - columnheader "True"
+    - row "7 Lucro bruto 2025 1.680835e+08 1.680835e+08 1.000000e-02 True":
+      - columnheader "7"
+      - columnheader "Lucro bruto 2025"
+      - columnheader "1.680835e+08"
+      - columnheader "1.680835e+08"
+      - columnheader "1.000000e-02"
+      - columnheader "True"
+    - 'row "8 Cenário 5/10/15: receita 3.276912e+08 3.276912e+08 1.000000e-02 True"':
+      - columnheader "8"
+      - 'columnheader "Cenário 5/10/15: receita"'
+      - columnheader "3.276912e+08"
+      - columnheader "3.276912e+08"
+      - columnheader "1.000000e-02"
+      - columnheader "True"
+    - 'row "9 Cenário 5/10/15: CPV 1.668063e+08 1.668063e+08 1.000000e-02 True"':
+      - columnheader "9"
+      - 'columnheader "Cenário 5/10/15: CPV"'
+      - columnheader "1.668063e+08"
+      - columnheader "1.668063e+08"
+      - columnheader "1.000000e-02"
+      - columnheader "True"
+    - 'row "10 Cenário 5/10/15: lucro bruto 1.608850e+08 1.608850e+08 1.000000e-02 True"':
+      - columnheader "10"
+      - 'columnheader "Cenário 5/10/15: lucro bruto"'
+      - columnheader "1.608850e+08"
+      - columnheader "1.608850e+08"
+      - columnheader "1.000000e-02"
+      - columnheader "True"
+    - 'row "11 Cenário 5/10/15: Δ lucro bruto -7.198580e+06 -7.198580e+06 1.000000e-02 True"':
+      - columnheader "11"
+      - 'columnheader "Cenário 5/10/15: Δ lucro bruto"'
+      - columnheader "-7.198580e+06"
+      - columnheader "-7.198580e+06"
+      - columnheader "1.000000e-02"
+      - columnheader "True"
+    - row "12 Volume necessário 5/10 (%) 2.014552e+01 2.014552e+01 1.000000e-08 True":
+      - columnheader "12"
+      - columnheader "Volume necessário 5/10 (%)"
+      - columnheader "2.014552e+01"
+      - columnheader "2.014552e+01"
+      - columnheader "1.000000e-08"
+      - columnheader "True"
+    - row "13 Cenário 0/0/0 = base (Δ lucro) 0.000000e+00 0.000000e+00 1.000000e-06 True":
+      - columnheader "13"
+      - columnheader "Cenário 0/0/0 = base (Δ lucro)"
+      - columnheader "0.000000e+00"
+      - columnheader "0.000000e+00"
+      - columnheader "1.000000e-06"
+      - columnheader "True"
+    - row "14 Shapley volume -3.433777e+06 -3.433777e+06 1.000000e-02 True":
+      - columnheader "14"
+      - columnheader "Shapley volume"
+      - columnheader "-3.433777e+06"
+      - columnheader "-3.433777e+06"
+      - columnheader "1.000000e-02"
+      - columnheader "True"
+    - row "15 Shapley mix -2.177903e+07 -2.177903e+07 1.000000e-02 True":
+      - columnheader "15"
+      - columnheader "Shapley mix"
+      - columnheader "-2.177903e+07"
+      - columnheader "-2.177903e+07"
+      - columnheader "1.000000e-02"
+      - columnheader "True"
+    - row "16 Shapley preço 1.215085e+05 1.215085e+05 1.000000e-02 True":
+      - columnheader "16"
+      - columnheader "Shapley preço"
+      - columnheader "1.215085e+05"
+      - columnheader "1.215085e+05"
+      - columnheader "1.000000e-02"
+      - columnheader "True"
+    - row "17 Δ receita 2024→2025 -2.509130e+07 -2.509130e+07 1.000000e-02 True":
+      - columnheader "17"
+      - columnheader "Δ receita 2024→2025"
+      - columnheader "-2.509130e+07"
+      - columnheader "-2.509130e+07"
+      - columnheader "1.000000e-02"
+      - columnheader "True"
+    - row "18 WAPE sazonal ingênuo 4.444580e-02 4.444580e-02 1.000000e-12 True":
+      - columnheader "18"
+      - columnheader "WAPE sazonal ingênuo"
+      - columnheader "4.444580e-02"
+      - columnheader "4.444580e-02"
+      - columnheader "1.000000e-12"
+      - columnheader "True"
+    - row "19 MAE sazonal ingênuo 2.645265e+05 2.645265e+05 1.000000e-06 True":
+      - columnheader "19"
+      - columnheader "MAE sazonal ingênuo"
+      - columnheader "2.645265e+05"
+      - columnheader "2.645265e+05"
+      - columnheader "1.000000e-06"
+      - columnheader "True"
+    - row "20 Última semana completa (início) 1.000000e+00 1.000000e+00 0.000000e+00 True":
+      - columnheader "20"
+      - columnheader "Última semana completa (início)"
+      - columnheader "1.000000e+00"
+      - columnheader "1.000000e+00"
+      - columnheader "0.000000e+00"
+      - columnheader "True"
+- button "21 rows":
+  - generic: 21 rows
+- button:
+- generic "27. Arquivos, checksums e contagens vs manifesto"
+- treegrid:
+  - rowgroup:
+    - row "tabela arquivo linhas_manifesto linhas_lidas contagem_ok bytes":
+      - columnheader: 
+      - columnheader "tabela":
+        - text: 
+        - button "tabela":
+          - generic "tabela":
+            - text: tabela
+      - columnheader "arquivo":
+        - text: 
+        - button "arquivo":
+          - generic "arquivo":
+            - text: arquivo
+      - columnheader "linhas_manifesto":
+        - text: 
+        - button "linhas_manifesto":
+          - generic "linhas_manifesto":
+            - text: linhas_manifesto
+      - columnheader "linhas_lidas":
+        - text: 
+        - button "linhas_lidas":
+          - generic "linhas_lidas":
+            - text: linhas_lidas
+      - columnheader "contagem_ok":
+        - text: 
+        - button "contagem_ok":
+          - generic "contagem_ok":
+            - text: contagem_ok
+      - columnheader "bytes":
+        - text: 
+        - button "bytes":
+          - generic "bytes":
+            - text: bytes
+  - rowgroup:
+    - row "0 sales sales.parquet 2349091 2349091 True 29151324":
+      - gridcell "0"
+      - gridcell "sales"
+      - gridcell "sales.parquet"
+      - gridcell "2349091"
+      - gridcell "2349091"
+      - gridcell "True"
+      - gridcell "29151324"
+    - row "1 orderrows orderrows.parquet 2349091 2349091 True 21546542":
+      - gridcell "1"
+      - gridcell "orderrows"
+      - gridcell "orderrows.parquet"
+      - gridcell "2349091"
+      - gridcell "2349091"
+      - gridcell "True"
+      - gridcell "21546542"
+    - row "2 orders orders.parquet 980666 980666 True 5717960":
+      - gridcell "2"
+      - gridcell "orders"
+      - gridcell "orders.parquet"
+      - gridcell "980666"
+      - gridcell "980666"
+      - gridcell "True"
+      - gridcell "5717960"
+    - row "3 customer customer.parquet 104990 104990 True 1560589":
+      - gridcell "3"
+      - gridcell "customer"
+      - gridcell "customer.parquet"
+      - gridcell "104990"
+      - gridcell "104990"
+      - gridcell "True"
+      - gridcell "1560589"
+    - row "4 currencyexchange currencyexchange.parquet 100450 100450 True 166667":
+      - gridcell "4"
+      - gridcell "currencyexchange"
+      - gridcell "currencyexchange.parquet"
+      - gridcell "100450"
+      - gridcell "100450"
+      - gridcell "True"
+      - gridcell "166667"
+    - row "5 product product.parquet 2517 2517 True 37906":
+      - gridcell "5"
+      - gridcell "product"
+      - gridcell "product.parquet"
+      - gridcell "2517"
+      - gridcell "2517"
+      - gridcell "True"
+      - gridcell "37906"
+    - row "6 date date.parquet 4018 4018 True 31969":
+      - gridcell "6"
+      - gridcell "date"
+      - gridcell "date.parquet"
+      - gridcell "4018"
+      - gridcell "4018"
+      - gridcell "True"
+      - gridcell "31969"
+    - row "7 store store.parquet 74 74 True 4483":
+      - gridcell "7"
+      - gridcell "store"
+      - gridcell "store.parquet"
+      - gridcell "74"
+      - gridcell "74"
+      - gridcell "True"
+      - gridcell "4483"
+  - rowgroup
+  - rowgroup
+  - rowgroup
+- text:    
+- button "8 rows":
+  - generic: 8 rows
+- button:
+- 'generic "2. Qualidade: PK, órfãos e reconciliação sales × orders+orderrows"'
+- treegrid:
+  - rowgroup:
+    - row "verificacao valor esperado ok":
+      - columnheader: 
+      - columnheader "verificacao":
+        - text: 
+        - button "verificacao":
+          - generic "verificacao":
+            - text: verificacao
+      - columnheader "valor":
+        - text: 
+        - button "valor":
+          - generic "valor":
+            - text: valor
+      - columnheader "esperado":
+        - text: 
+        - button "esperado":
+          - generic "esperado":
+            - text: esperado
+      - columnheader "ok":
+        - text: 
+        - button "ok":
+          - generic "ok":
+            - text: ok
+      - columnheader: 
+  - rowgroup:
+    - row "0 Linhas sales 2349091.0 2349091.0 True":
+      - gridcell "0"
+      - gridcell "Linhas sales"
+      - gridcell "2349091.0"
+      - gridcell "2349091.0"
+      - gridcell "True"
+      - gridcell
+    - row "1 Pedidos distintos em sales 980666.0 980666.0 True":
+      - gridcell "1"
+      - gridcell "Pedidos distintos em sales"
+      - gridcell "980666.0"
+      - gridcell "980666.0"
+      - gridcell "True"
+      - gridcell
+    - row "2 PK duplicada sales (OrderKey+LineNumber) 0.0 0.0 True":
+      - gridcell "2"
+      - gridcell "PK duplicada sales (OrderKey+LineNumber)":
+        - generic: PK duplicada sales (OrderKey+LineNumber)
+      - gridcell "0.0"
+      - gridcell "0.0"
+      - gridcell "True"
+      - gridcell
+    - row "3 PK duplicada orderrows (OrderKey+RowNumber) 0.0 0.0 True":
+      - gridcell "3"
+      - gridcell "PK duplicada orderrows (OrderKey+RowNumber)":
+        - generic: PK duplicada orderrows (OrderKey+RowNumber)
+      - gridcell "0.0"
+      - gridcell "0.0"
+      - gridcell "True"
+      - gridcell
+    - row "4 PK duplicada orders (OrderKey) 0.0 0.0 True":
+      - gridcell "4"
+      - gridcell "PK duplicada orders (OrderKey)"
+      - gridcell "0.0"
+      - gridcell "0.0"
+      - gridcell "True"
+      - gridcell
+    - row "5 PK duplicada customer 0.0 0.0 True":
+      - gridcell "5"
+      - gridcell "PK duplicada customer"
+      - gridcell "0.0"
+      - gridcell "0.0"
+      - gridcell "True"
+      - gridcell
+    - row "6 PK duplicada product 0.0 0.0 True":
+      - gridcell "6"
+      - gridcell "PK duplicada product"
+      - gridcell "0.0"
+      - gridcell "0.0"
+      - gridcell "True"
+      - gridcell
+    - row "7 PK duplicada store 0.0 0.0 True":
+      - gridcell "7"
+      - gridcell "PK duplicada store"
+      - gridcell "0.0"
+      - gridcell "0.0"
+      - gridcell "True"
+      - gridcell
+    - row "8 PK duplicada date 0.0 0.0 True":
+      - gridcell "8"
+      - gridcell "PK duplicada date"
+      - gridcell "0.0"
+      - gridcell "0.0"
+      - gridcell "True"
+      - gridcell
+    - row "9 Órfãos sales→customer 0.0 0.0 True":
+      - gridcell "9"
+      - gridcell "Órfãos sales→customer"
+      - gridcell "0.0"
+      - gridcell "0.0"
+      - gridcell "True"
+      - gridcell
+    - row "10 Órfãos sales→product 0.0 0.0 True":
+      - gridcell "10"
+      - gridcell "Órfãos sales→product"
+      - gridcell "0.0"
+      - gridcell "0.0"
+      - gridcell "True"
+      - gridcell
+    - row "11 Órfãos sales→store 0.0 0.0 True":
+      - gridcell "11"
+      - gridcell "Órfãos sales→store"
+      - gridcell "0.0"
+      - gridcell "0.0"
+      - gridcell "True"
+      - gridcell
+    - row "12 Órfãos sales→date 0.0 0.0 True":
+      - gridcell "12"
+      - gridcell "Órfãos sales→date"
+      - gridcell "0.0"
+      - gridcell "0.0"
+      - gridcell "True"
+      - gridcell
+    - row "13 Órfãos orderrows→orders 0.0 0.0 True":
+      - gridcell "13"
+      - gridcell "Órfãos orderrows→orders"
+      - gridcell "0.0"
+      - gridcell "0.0"
+      - gridcell "True"
+      - gridcell
+    - row "14 Linhas sales após joins dimensionais 2349091.0 2349091.0 True":
+      - gridcell "14"
+      - gridcell "Linhas sales após joins dimensionais":
+        - generic: Linhas sales após joins dimensionais
+      - gridcell "2349091.0"
+      - gridcell "2349091.0"
+      - gridcell "True"
+      - gridcell
+    - row "15 Linhas orderrows+orders 2349091.0 2349091.0 True":
+      - gridcell "15"
+      - gridcell "Linhas orderrows+orders"
+      - gridcell "2349091.0"
+      - gridcell "2349091.0"
+      - gridcell "True"
+      - gridcell
+    - row "16 Linhas sem par sales vs orderrows 0.0 0.0 True":
+      - gridcell "16"
+      - gridcell "Linhas sem par sales vs orderrows"
+      - gridcell "0.0"
+      - gridcell "0.0"
+      - gridcell "True"
+      - gridcell
+    - row "17 Linhas com atributo divergente sales vs orders+orderrows 0.0 0.0 True":
+      - gridcell "17"
+      - gridcell "Linhas com atributo divergente sales vs orders+orderrows":
+        - generic: Linhas com atributo divergente sales vs orders+orderrows
+      - gridcell "0.0"
+      - gridcell "0.0"
+      - gridcell "True"
+      - gridcell
+    - row "18 Diferença receita líquida sales − (orders+orderrows), USD 0.0 0.0 True":
+      - gridcell "18"
+      - gridcell "Diferença receita líquida sales − (orders+orderrows), USD":
+        - generic: Diferença receita líquida sales − (orders+orderrows), USD
+      - gridcell "0.0"
+      - gridcell "0.0"
+      - gridcell "True"
+      - gridcell
+    - row "19 Diferença receita bruta sales − (orders+orderrows), USD 0.0 0.0 True":
+      - gridcell "19"
+      - gridcell "Diferença receita bruta sales − (orders+orderrows), USD":
+        - generic: Diferença receita bruta sales − (orders+orderrows), USD
+      - gridcell "0.0"
+      - gridcell "0.0"
+      - gridcell "True"
+      - gridcell
+    - row "20 Diferença CPV sales − (orders+orderrows), USD 0.0 0.0 True":
+      - gridcell "20"
+      - gridcell "Diferença CPV sales − (orders+orderrows), USD":
+        - generic: Diferença CPV sales − (orders+orderrows), USD
+      - gridcell "0.0"
+      - gridcell "0.0"
+      - gridcell "True"
+      - gridcell
+    - row "21 Linhas com NetPrice > UnitPrice 0.0 0.0 True":
+      - gridcell "21"
+      - gridcell "Linhas com NetPrice > UnitPrice"
+      - gridcell "0.0"
+      - gridcell "0.0"
+      - gridcell "True"
+      - gridcell
+    - row "22 Linhas com quantidade ≤ 0 0.0 0.0 True":
+      - gridcell "22"
+      - gridcell "Linhas com quantidade ≤ 0"
+      - gridcell "0.0"
+      - gridcell "0.0"
+      - gridcell "True"
+      - gridcell
+    - row "23 Linhas com entrega antes do pedido 0.0 0.0 True":
+      - gridcell "23"
+      - gridcell "Linhas com entrega antes do pedido"
+      - gridcell "0.0"
+      - gridcell "0.0"
+      - gridcell "True"
+      - gridcell
+  - rowgroup
+  - rowgroup
+  - rowgroup
+- text:    
+- button "24 rows":
+  - generic: 24 rows
+- button:
+- 'generic "3. Qualidade: verificação de moeda (2025)"'
+- treegrid:
+  - rowgroup:
+    - row "moeda linhas taxa_media_usd_para_moeda razao_unitprice_preco_cadastro razao_unitcost_custo_cadastro":
+      - columnheader: 
+      - columnheader "moeda":
+        - text: 
+        - button "moeda":
+          - generic "moeda":
+            - text: moeda
+      - columnheader "linhas":
+        - text: 
+        - button "linhas":
+          - generic "linhas":
+            - text: linhas
+      - columnheader "taxa_media_usd_para_moeda":
+        - text: 
+        - button "taxa_media_usd_para_moeda":
+          - generic "taxa_media_usd_para_moeda":
+            - text: taxa_media_usd_para_moeda
+      - columnheader "razao_unitprice_preco_cadastro":
+        - text: 
+        - button "razao_unitprice_preco_cadastro":
+          - generic "razao_unitprice_preco_cadastro":
+            - text: razao_unitprice_preco_cadastro
+      - columnheader "razao_unitcost_custo_cadastro":
+        - text: 
+        - button "razao_unitcost_custo_cadastro":
+          - generic "razao_unitcost_custo_cadastro":
+            - text: razao_unitcost_custo_cadastro
+  - rowgroup:
+    - row "0 USD 163240 1.0 1.0 1.0":
+      - gridcell "0"
+      - gridcell "USD"
+      - gridcell "163240"
+      - gridcell "1.0"
+      - gridcell "1.0"
+      - gridcell "1.0"
+    - row "1 EUR 109813 0.9311 1.0 1.0":
+      - gridcell "1"
+      - gridcell "EUR"
+      - gridcell "109813"
+      - gridcell "0.9311"
+      - gridcell "1.0"
+      - gridcell "1.0"
+    - row "2 CAD 52546 1.3509 1.0 1.0":
+      - gridcell "2"
+      - gridcell "CAD"
+      - gridcell "52546"
+      - gridcell "1.3509"
+      - gridcell "1.0"
+      - gridcell "1.0"
+    - row "3 GBP 31621 0.8106 1.0 1.0":
+      - gridcell "3"
+      - gridcell "GBP"
+      - gridcell "31621"
+      - gridcell "0.8106"
+      - gridcell "1.0"
+      - gridcell "1.0"
+    - row "4 AUD 31324 1.5008 1.0 1.0":
+      - gridcell "4"
+      - gridcell "AUD"
+      - gridcell "31324"
+      - gridcell "1.5008"
+      - gridcell "1.0"
+      - gridcell "1.0"
+  - rowgroup
+  - rowgroup
+  - rowgroup
+- text:    
+- button "5 rows":
+  - generic: 5 rows
+- button "App run settings Show advanced":
+  - generic: App run settings
+  - generic: Show advanced
+- generic: Auto-refresh published results
+- checkbox [checked]
+- generic: Automatically refresh published results when a user runs the app, or when results are stale.
+- generic: "Mark app results as stale if older than:"
+- button "24 hours":
+  - generic: 24 hours
+- text: Version details
+- button "Compare":
+  - generic: Compare
+- textbox "Provide an optional description for your version"
+- button "Request review" [disabled]:
+  - generic: Request review
+- button "Publish app":
+  - generic: Publish app
+- button:

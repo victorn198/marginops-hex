@@ -1,0 +1,279 @@
+- text: Publish app
+- button "App preview":
+  - generic: App preview
+- button "Notebook diff":
+  - generic: Notebook diff
+- button:
+- button:
+- generic: Visão executiva
+- generic: Motores de resultado
+- generic: Clientes e coortes
+- generic: Previsão e validação
+- generic: Simulador de margem
+- generic: Qualidade e metodologia
+- 'heading "Simulador de margem — base Ano 2025 · Mercado: Todos · Categoria: Todas" [level=2]':
+  - text: "Simulador de margem — base Ano 2025 · Mercado: Todos · Categoria: Todas"
+  - link:
+    - /url: "#simulador-de-margem--base-ano-2025--mercado-todos--categoria-todas"
+- paragraph:
+  - text: Os controles abaixo alteram
+  - strong: apenas o cenário hipotético
+  - text: ; os fatos históricos (base) não mudam. Os filtros de ano, mercado e categoria (aba
+  - emphasis: Visão executiva
+  - text: ) definem a base.
+- generic "Desconto adicional sobre o preço líquido (%)"
+- generic: 0,0
+- generic: 5,0
+- generic: 10,0
+- generic: 15,0
+- generic: 20,0
+- slider:
+  - generic: 5,0
+- generic "Inflação do custo unitário (%)"
+- generic: 0,0
+- generic: 5,0
+- generic: 10,0
+- generic: 15,0
+- generic: 20,0
+- generic: 25,0
+- slider:
+  - generic: 10,0
+- generic "Aumento de volume ASSUMIDO (%)"
+- generic: "0"
+- generic: "5"
+- generic: "10"
+- generic: "15"
+- generic: "20"
+- generic: "25"
+- generic: "30"
+- generic: "35"
+- generic: "40"
+- generic: "45"
+- generic: "50"
+- slider:
+  - generic: "15"
+- generic "Cenário lucro bruto"
+- generic: $ 160,9 mi
+- generic "Lucro bruto do CENÁRIO (USD)"
+- generic "-$ 7,2 mi vs histórico":
+  - text: "-$ 7,2 mi vs histórico"
+- generic "Cenário receita"
+- generic: $ 327,7 mi
+- generic "Receita líquida do CENÁRIO (USD)"
+- generic "9.25% vs histórico":
+  - text: 9.25% vs histórico
+- generic "Cenário margem"
+- generic: 49,1%
+- generic "Margem bruta do CENÁRIO"
+- generic "-6,9% vs histórico":
+  - text: "-6,9% vs histórico"
+- generic "Cenário volume necessário"
+- generic: 20,1%
+- generic "Volume necessário p/ manter lucro bruto"
+- generic "Nota do simulador"
+- heading "Cenário hipotético — não é fato histórico" [level=3]:
+  - text: Cenário hipotético — não é fato histórico
+  - link:
+    - /url: "#cenário-hipotético--não-é-fato-histórico"
+- paragraph:
+  - text: Para preservar o lucro bruto histórico seria necessário
+  - strong: +20,1%
+  - text: de volume. O aumento assumido de 15%
+  - strong: não cobre
+  - text: "essa necessidade (Δ lucro bruto do cenário: −USD 7,2 mi)."
+- paragraph:
+  - strong: Fórmulas
+  - text: (base = ano e escopo selecionados;
+  - emphasis: d
+  - text: = desconto adicional,
+  - emphasis: k
+  - text: = inflação de custo,
+  - emphasis: u
+  - text: "= aumento de volume assumido):"
+- paragraph:
+  - math:
+    - generic: Receita
+    - generic: c
+    - generic: e
+    - generic: "n"
+    - generic: =
+    - generic: "N"
+    - generic: "0"
+    - generic: (
+    - generic: "1"
+    - generic: −
+    - generic: d
+    - generic: )
+    - generic: (
+    - generic: "1"
+    - generic: +
+    - generic: u
+    - generic: )
+    - generic: CPV
+    - generic: c
+    - generic: e
+    - generic: "n"
+    - generic: =
+    - generic: C
+    - generic: "0"
+    - generic: (
+    - generic: "1"
+    - generic: +
+    - generic: k
+    - generic: )
+    - generic: (
+    - generic: "1"
+    - generic: +
+    - generic: u
+    - generic: )
+  - generic: Receita
+  - generic: cen
+  - text: =
+  - text: "N"
+  - generic: "0"
+  - text: (1 −
+  - generic: d)(1 +
+  - text: u)
+  - generic: CPV
+  - generic: cen
+  - text: =
+  - text: C
+  - generic: "0"
+  - text: (1 +
+  - generic: k)(1 +
+  - generic: u)
+- paragraph:
+  - math:
+    - generic: LB
+    - generic: c
+    - generic: e
+    - generic: "n"
+    - generic: =
+    - generic: (
+    - generic: "1"
+    - generic: +
+    - generic: u
+    - generic: )
+    - generic: "["
+    - generic: "N"
+    - generic: "0"
+    - generic: (
+    - generic: "1"
+    - generic: −
+    - generic: d
+    - generic: )
+    - generic: −
+    - generic: C
+    - generic: "0"
+    - generic: (
+    - generic: "1"
+    - generic: +
+    - generic: k
+    - generic: )
+    - generic: "]"
+    - generic: u
+    - generic: ∗
+    - generic: =
+    - generic: "N"
+    - generic: "0"
+    - generic: −
+    - generic: C
+    - generic: "0"
+    - generic: "N"
+    - generic: "0"
+    - generic: (
+    - generic: "1"
+    - generic: −
+    - generic: d
+    - generic: )
+    - generic: −
+    - generic: C
+    - generic: "0"
+    - generic: (
+    - generic: "1"
+    - generic: +
+    - generic: k
+    - generic: )
+    - generic: −
+    - generic: "1"
+  - generic: LB
+  - generic: cen
+  - text: =
+  - generic: (1 +
+  - text: u) [
+  - text: "N"
+  - generic: "0"
+  - text: (1 −
+  - generic: d) −
+  - text: C
+  - generic: "0"
+  - text: (1 +
+  - text: k)]
+  - text: u
+  - generic: ∗
+  - text: =
+  - text: "N"
+  - generic: "0"
+  - text: (1−d)−
+  - text: C
+  - generic: "0"
+  - text: (1+k)
+  - text: "N"
+  - generic: "0"
+  - text: −
+  - text: C
+  - generic: "0"
+  - text: −
+  - generic: "1"
+- paragraph:
+  - text: Se $N_0(1-d) - C_0(1+k) \le 0$, a contribuição por unidade é nula ou negativa e
+  - strong: não existe
+  - text: aumento de volume positivo e finito que restaure o lucro bruto. O aumento de volume é uma
+  - strong: premissa explícita do usuário
+  - text: — não é elasticidade estimada nem previsão causal; o mix de produtos é mantido constante.
+- generic "25. Matriz de sensibilidade (desconto × custo → volume necessário)"
+- iframe:
+  - toolbar:
+    - button "Download plot as a PNG":
+    - button "Zoom":
+    - button "Pan":
+    - button "Box Select":
+    - button "Lasso Select":
+    - button "Zoom in":
+    - button "Zoom out":
+    - button "Autoscale":
+    - button "Reset axes":
+    - link "plotly-logomark":
+      - /url: https://plotly.com/
+      - img "plotly-logomark"
+- generic "26. Curva de sensibilidade ao volume"
+- iframe:
+  - toolbar:
+    - button "Download plot as a PNG":
+    - button "Zoom":
+    - button "Pan":
+    - button "Zoom in":
+    - button "Zoom out":
+    - button "Autoscale":
+    - button "Reset axes":
+    - link "plotly-logomark":
+      - /url: https://plotly.com/
+      - img "plotly-logomark"
+- button "App run settings Show advanced":
+  - generic: App run settings
+  - generic: Show advanced
+- generic: Auto-refresh published results
+- checkbox [checked]
+- generic: Automatically refresh published results when a user runs the app, or when results are stale.
+- generic: "Mark app results as stale if older than:"
+- button "24 hours":
+  - generic: 24 hours
+- text: Version details
+- button "Compare":
+  - generic: Compare
+- textbox "Provide an optional description for your version"
+- button "Request review" [disabled]:
+  - generic: Request review
+- button "Publish app":
+  - generic: Publish app
+- button:

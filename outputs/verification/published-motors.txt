@@ -1,0 +1,542 @@
+- generic: Visão executiva
+- generic: Motores de resultado
+- generic: Clientes e coortes
+- generic: Previsão e validação
+- generic: Simulador de margem
+- generic: Qualidade e metodologia
+- button "Run":
+  - generic: Run
+- button:
+- button:
+- button:
+- 'heading "Motores de resultado — Ano 2025 · Mercado: Todos · Categoria: Todas" [level=2]':
+  - text: "Motores de resultado — Ano 2025 · Mercado: Todos · Categoria: Todas"
+  - link:
+    - /url: "#motores-de-resultado--ano-2025--mercado-todos--categoria-todas"
+- paragraph:
+  - text: Onde o lucro bruto mudou e por quê. O
+  - strong: sinal comercial
+  - text: "da tabela de produtos indica prioridade de análise (ex.: produto relevante com lucro bruto em queda),"
+  - strong: não
+  - text: "um ganho garantido: recuperar receita depende de ações e reações de mercado não observadas nos dados. Canal"
+  - emphasis: Online
+  - text: = loja 999999 do cadastro; os demais são lojas físicas.
+- generic "14. Decomposição Shapley preço/volume/mix (reconcilia exatamente)"
+- iframe:
+  - toolbar:
+    - button "Download plot as a PNG":
+    - button "Zoom":
+    - button "Pan":
+    - button "Box Select":
+    - button "Lasso Select":
+    - button "Zoom in":
+    - button "Zoom out":
+    - button "Autoscale":
+    - button "Reset axes":
+    - link "plotly-logomark":
+      - /url: https://plotly.com/
+      - img "plotly-logomark"
+- generic "Nota da decomposição"
+- paragraph:
+  - strong: Como ler a ponte.
+  - text: Receita = Unidades totais × Σ (participação do produto × preço líquido médio do produto). Os três efeitos são valores de Shapley simétricos (média das 6 ordens de substituição) e somam exatamente a variação da receita.
+- paragraph: "Δ receita = USD -25.091.298 = volume -3.433.777 + mix -21.779.030 + preço 121.508 (resíduo numérico 6.0e-08). Produtos novos no recorte: 0; descontinuados: 0."
+- paragraph:
+  - emphasis: Produtos novos
+  - text: (sem venda no ano anterior) recebem o próprio preço atual como preço de referência anterior, e
+  - emphasis: descontinuados
+  - text: mantêm o preço anterior; assim, sua entrada/saída aparece integralmente no
+  - strong: mix
+  - text: ", não no preço. É uma atribuição contábil, não um efeito causal."
+- button:
+- button:
+- 'generic "Pivot: categoria × canal × ano"'
+- treegrid:
+  - rowgroup:
+    - row:  
+    - row:  
+    - row:  
+    - row "categoria":
+      - columnheader "categoria":
+        - text: 
+        - generic: categoria
+  - rowgroup:
+    - row "canal / ano":
+      - columnheader "canal / ano":
+        - generic: canal
+        - generic: /
+        - generic: ano
+    - row "Loja física":
+      - columnheader "Loja física":
+        - generic: Loja física
+    - row "2.024 2.025":
+      - columnheader "2.024":
+        - generic: "2.024"
+      - columnheader "2.025":
+        - generic: "2.025"
+    - row "Receita líquida (USD) Lucro bruto (USD) Receita líquida (USD) Lucro bruto (USD)":
+      - columnheader "Receita líquida (USD)":
+        - text: 
+        - generic: Receita líquida (USD)
+        - text: 
+        - generic: 
+      - columnheader "Lucro bruto (USD)":
+        - text: 
+        - generic: Lucro bruto (USD)
+        - text: 
+        - generic: 
+      - columnheader "Receita líquida (USD)":
+        - text: 
+        - generic: Receita líquida (USD)
+        - text: 
+        - generic: 
+      - columnheader "Lucro bruto (USD)":
+        - text: 
+        - generic: Lucro bruto (USD)
+        - text: 
+        - generic: 
+  - rowgroup:
+    - row "Computers":
+      - gridcell "Computers":
+        - generic: Computers
+    - row "Cell phones":
+      - gridcell "Cell phones":
+        - generic: Cell phones
+    - row "Home Appliances":
+      - gridcell "Home Appliances":
+        - generic: Home Appliances
+    - row "TV and Video":
+      - gridcell "TV and Video":
+        - generic: TV and Video
+    - row "Music, Movies and Audio Books":
+      - gridcell "Music, Movies and Audio Books":
+        - generic: Music, Movies and Audio Books
+    - row "Cameras and camcorders":
+      - gridcell "Cameras and camcorders":
+        - generic: Cameras and camcorders
+    - row "Audio":
+      - gridcell "Audio":
+        - generic: Audio
+    - row "Games and Toys":
+      - gridcell "Games and Toys":
+        - generic: Games and Toys
+    - row "Total":
+      - gridcell "Total":
+        - generic: Total
+  - rowgroup:
+    - row "US$ 45 mi US$ 25.276.688,26 US$ 47,4 mi US$ 26.726.485,38":
+      - gridcell "US$ 45 mi"
+      - gridcell "US$ 25.276.688,26"
+      - gridcell "US$ 47,4 mi"
+      - gridcell "US$ 26.726.485,38"
+    - row "US$ 23,8 mi US$ 12.867.178,27 US$ 27 mi US$ 14.560.919,09":
+      - gridcell "US$ 23,8 mi"
+      - gridcell "US$ 12.867.178,27"
+      - gridcell "US$ 27 mi"
+      - gridcell "US$ 14.560.919,09"
+    - row "US$ 22,2 mi US$ 12.326.516,23 US$ 20,7 mi US$ 11.494.145,57":
+      - gridcell "US$ 22,2 mi"
+      - gridcell "US$ 12.326.516,23"
+      - gridcell "US$ 20,7 mi"
+      - gridcell "US$ 11.494.145,57"
+    - row "US$ 16,6 mi US$ 9.446.814,63 US$ 11,7 mi US$ 6.643.429,85":
+      - gridcell "US$ 16,6 mi"
+      - gridcell "US$ 9.446.814,63"
+      - gridcell "US$ 11,7 mi"
+      - gridcell "US$ 6.643.429,85"
+    - row "US$ 8,75 mi US$ 5.128.460,37 US$ 10,4 mi US$ 6.114.822,07":
+      - gridcell "US$ 8,75 mi"
+      - gridcell "US$ 5.128.460,37"
+      - gridcell "US$ 10,4 mi"
+      - gridcell "US$ 6.114.822,07"
+    - row "US$ 7,24 mi US$ 4.198.716,73 US$ 11,2 mi US$ 6.513.861,34":
+      - gridcell "US$ 7,24 mi"
+      - gridcell "US$ 4.198.716,73"
+      - gridcell "US$ 11,2 mi"
+      - gridcell "US$ 6.513.861,34"
+    - row "US$ 2,69 mi US$ 1.485.988,55 US$ 4,06 mi US$ 2.237.815,18":
+      - gridcell "US$ 2,69 mi"
+      - gridcell "US$ 1.485.988,55"
+      - gridcell "US$ 4,06 mi"
+      - gridcell "US$ 2.237.815,18"
+    - row "US$ 1,09 mi US$ 571.724,17 US$ 1,42 mi US$ 743.488,27":
+      - gridcell "US$ 1,09 mi"
+      - gridcell "US$ 571.724,17"
+      - gridcell "US$ 1,42 mi"
+      - gridcell "US$ 743.488,27"
+    - row "US$ 127 mi US$ 71.302.087,20 US$ 134 mi US$ 75.034.966,75":
+      - gridcell "US$ 127 mi"
+      - gridcell "US$ 71.302.087,20"
+      - gridcell "US$ 134 mi"
+      - gridcell "US$ 75.034.966,75"
+  - rowgroup
+  - rowgroup
+  - rowgroup
+  - rowgroup
+- text:    
+- button "9 rows":
+  - generic: 9 rows
+- button:
+- button:
+- 'generic "Canal: receita líquida ano selecionado vs anterior"'
+- generic "Vega visualization"
+- generic: X-Axis Field
+- generic: receita_anterior
+- generic: receita_atual
+- button:
+- 'generic "11. Produtos: lucro bruto, variação e sinal comercial"'
+- treegrid:
+  - rowgroup:
+    - row "produto categoria receita_atual lucro_bruto_atual margem_atual delta_lucro_bruto delta_receita unidades_atual":
+      - columnheader: 
+      - columnheader "produto":
+        - text: 
+        - button "produto":
+          - generic "produto":
+            - text: produto
+      - columnheader "categoria":
+        - text: 
+        - button "categoria":
+          - generic "categoria":
+            - text: categoria
+      - columnheader "receita_atual":
+        - text: 
+        - button "receita_atual":
+          - generic "receita_atual":
+            - text: receita_atual
+      - columnheader "lucro_bruto_atual":
+        - text: 
+        - button "lucro_bruto_atual":
+          - generic "lucro_bruto_atual":
+            - text: lucro_bruto_atual
+      - columnheader "margem_atual":
+        - text: 
+        - button "margem_atual":
+          - generic "margem_atual":
+            - text: margem_atual
+      - columnheader "delta_lucro_bruto":
+        - text: 
+        - button "delta_lucro_bruto":
+          - generic "delta_lucro_bruto":
+            - text: delta_lucro_bruto
+      - columnheader "delta_receita":
+        - text: 
+        - button "delta_receita":
+          - generic "delta_receita":
+            - text: delta_receita
+      - columnheader "unidades_atual":
+        - text: 
+        - button "unidades_atual":
+          - generic "unidades_atual":
+            - text: unidades_atual
+  - rowgroup:
+    - row "0 Adventure Works 52\" LCD HDTV X590 Silver TV and Video 1433030.0584999998 927638.7385000001 0.6473267835505072 -237049.44880000025 -374446.70880000014 526.0":
+      - gridcell "0"
+      - gridcell "Adventure Works 52\" LCD HDTV X590 Silver":
+        - generic: Adventure Works 52" LCD HDTV X590 Silver
+      - gridcell "TV and Video"
+      - gridcell "1433030.0584999998"
+      - gridcell "927638.7385000001"
+      - gridcell "0.6473267835505072"
+      - gridcell "-237049.44880000025"
+      - gridcell "-374446.70880000014"
+      - gridcell "526.0"
+    - row "1 Adventure Works 52\" LCD HDTV X590 Brown TV and Video 1379873.2418 892737.5018000002 0.6469706598813765 -560727.3731000002 -877797.9730999996 507.0":
+      - gridcell "1"
+      - gridcell "Adventure Works 52\" LCD HDTV X590 Brown":
+        - generic: Adventure Works 52" LCD HDTV X590 Brown
+      - gridcell "TV and Video"
+      - gridcell "1379873.2418"
+      - gridcell "892737.5018000002"
+      - gridcell "0.6469706598813765"
+      - gridcell "-560727.3731000002"
+      - gridcell "-877797.9730999996"
+      - gridcell "507.0"
+    - row "2 Adventure Works 52\" LCD HDTV X590 Black TV and Video 1369694.2769 890245.0969000002 0.6499589812953538 -528286.6543000003 -813650.1943000001 499.0":
+      - gridcell "2"
+      - gridcell "Adventure Works 52\" LCD HDTV X590 Black":
+        - generic: Adventure Works 52" LCD HDTV X590 Black
+      - gridcell "TV and Video"
+      - gridcell "1369694.2769"
+      - gridcell "890245.0969000002"
+      - gridcell "0.6499589812953538"
+      - gridcell "-528286.6543000003"
+      - gridcell "-813650.1943000001"
+      - gridcell "499.0"
+    - row "3 Adventure Works Desktop PC2.33 XD233 Brown Computers 1344981.6900000002 869506.6400000001 0.6464821390988602 -204382.14999999944 -308723.3999999999 1481.0":
+      - gridcell "3"
+      - gridcell "Adventure Works Desktop PC2.33 XD233 Brown":
+        - generic: Adventure Works Desktop PC2.33 XD233 Brown
+      - gridcell "Computers"
+      - gridcell "1344981.6900000002"
+      - gridcell "869506.6400000001"
+      - gridcell "0.6464821390988602"
+      - gridcell "-204382.14999999944"
+      - gridcell "-308723.3999999999"
+      - gridcell "1481.0"
+    - row "4 Adventure Works 52\" LCD HDTV X590 White TV and Video 1330254.4129 862335.0729 0.6482482332233577 -546986.1800000002 -840997.0999999994 487.0":
+      - gridcell "4"
+      - gridcell "Adventure Works 52\" LCD HDTV X590 White":
+        - generic: Adventure Works 52" LCD HDTV X590 White
+      - gridcell "TV and Video"
+      - gridcell "1330254.4129"
+      - gridcell "862335.0729"
+      - gridcell "0.6482482332233577"
+      - gridcell "-546986.1800000002"
+      - gridcell "-840997.0999999994"
+      - gridcell "487.0"
+    - row "5 Adventure Works Desktop PC2.33 XD233 Black Computers 1269603.18 821096.3299999998 0.646734619867603 -355174.0399999998 -545556.6899999997 1397.0":
+      - gridcell "5"
+      - gridcell "Adventure Works Desktop PC2.33 XD233 Black":
+        - generic: Adventure Works Desktop PC2.33 XD233 Black
+      - gridcell "Computers"
+      - gridcell "1269603.18"
+      - gridcell "821096.3299999998"
+      - gridcell "0.646734619867603"
+      - gridcell "-355174.0399999998"
+      - gridcell "-545556.6899999997"
+      - gridcell "1397.0"
+    - row "6 Proseware Projector 1080p LCD86 Black Computers 1255089.6 813308.8200000003 0.6480085724557038 311138.16000000027 476901.0000000001 581.0":
+      - gridcell "6"
+      - gridcell "Proseware Projector 1080p LCD86 Black":
+        - generic: Proseware Projector 1080p LCD86 Black
+      - gridcell "Computers"
+      - gridcell "1255089.6"
+      - gridcell "813308.8200000003"
+      - gridcell "0.6480085724557038"
+      - gridcell "311138.16000000027"
+      - gridcell "476901.0000000001"
+      - gridcell "581.0"
+    - row "7 Adventure Works Desktop PC2.33 XD233 White Computers 1249108.83 809270.3300000001 0.6478781596636379 -291034.67000000016 -447707.0699999996 1370.0":
+      - gridcell "7"
+      - gridcell "Adventure Works Desktop PC2.33 XD233 White":
+        - generic: Adventure Works Desktop PC2.33 XD233 White
+      - gridcell "Computers"
+      - gridcell "1249108.83"
+      - gridcell "809270.3300000001"
+      - gridcell "0.6478781596636379"
+      - gridcell "-291034.67000000016"
+      - gridcell "-447707.0699999996"
+      - gridcell "1370.0"
+    - row "8 Adventure Works Desktop PC2.33 XD233 Silver Computers 1210687.98 780802.0299999999 0.6449242438171393 -427445.3300000004 -653464.53 1339.0":
+      - gridcell "8"
+      - gridcell "Adventure Works Desktop PC2.33 XD233 Silver":
+        - generic: Adventure Works Desktop PC2.33 XD233 Silver
+      - gridcell "Computers"
+      - gridcell "1210687.98"
+      - gridcell "780802.0299999999"
+      - gridcell "0.6449242438171393"
+      - gridcell "-427445.3300000004"
+      - gridcell "-653464.53"
+      - gridcell "1339.0"
+    - row "9 WWI Desktop PC2.33 X2330 Silver Computers 1144706.4000000004 739139.0399999997 0.6457018498367786 -408569.65999999957 -628099.7399999995 1332.0":
+      - gridcell "9"
+      - gridcell "WWI Desktop PC2.33 X2330 Silver"
+      - gridcell "Computers"
+      - gridcell "1144706.4000000004"
+      - gridcell "739139.0399999997"
+      - gridcell "0.6457018498367786"
+      - gridcell "-408569.65999999957"
+      - gridcell "-628099.7399999995"
+      - gridcell "1332.0"
+    - row "10 Contoso Projector 1080p X981 Black Computers 1117152.96 726351.1199999999 0.6501805446588084 152638.5 227983.77000000002 472.0":
+      - gridcell "10"
+      - gridcell "Contoso Projector 1080p X981 Black"
+      - gridcell "Computers"
+      - gridcell "1117152.96"
+      - gridcell "726351.1199999999"
+      - gridcell "0.6501805446588084"
+      - gridcell "152638.5"
+      - gridcell "227983.77000000002"
+      - gridcell "472.0"
+    - row "11 Proseware Projector 1080p DLP86 Silver Computers 1117677.75 724392.0000000001 0.6481224127437449 133912.50000000012 205117.91999999993 475.0":
+      - gridcell "11"
+      - gridcell "Proseware Projector 1080p DLP86 Silver":
+        - generic: Proseware Projector 1080p DLP86 Silver
+      - gridcell "Computers"
+      - gridcell "1117677.75"
+      - gridcell "724392.0000000001"
+      - gridcell "0.6481224127437449"
+      - gridcell "133912.50000000012"
+      - gridcell "205117.91999999993"
+      - gridcell "475.0"
+    - row "12 WWI Desktop PC2.33 X2330 White Computers 1061895.31 687993.8699999996 0.647892370859044 -414522.81999999937 -643796.2599999998 1228.0":
+      - gridcell "12"
+      - gridcell "WWI Desktop PC2.33 X2330 White"
+      - gridcell "Computers"
+      - gridcell "1061895.31"
+      - gridcell "687993.8699999996"
+      - gridcell "0.647892370859044"
+      - gridcell "-414522.81999999937"
+      - gridcell "-643796.2599999998"
+      - gridcell "1228.0"
+    - row "13 WWI Desktop PC2.33 X2330 Brown Computers 1057245.1700000002 683343.7300000001 0.6463436763678949 -350291.1199999993 -536328.3999999994 1228.0":
+      - gridcell "13"
+      - gridcell "WWI Desktop PC2.33 X2330 Brown"
+      - gridcell "Computers"
+      - gridcell "1057245.1700000002"
+      - gridcell "683343.7300000001"
+      - gridcell "0.6463436763678949"
+      - gridcell "-350291.1199999993"
+      - gridcell "-536328.3999999994"
+      - gridcell "1228.0"
+    - row "14 WWI Desktop PC2.33 X2330 Black Computers 1050315.91 681895.1099999999 0.6492285830460285 -301721.0499999997 -469489.5299999991 1210.0":
+      - gridcell "14"
+      - gridcell "WWI Desktop PC2.33 X2330 Black"
+      - gridcell "Computers"
+      - gridcell "1050315.91"
+      - gridcell "681895.1099999999"
+      - gridcell "0.6492285830460285"
+      - gridcell "-301721.0499999997"
+      - gridcell "-469489.5299999991"
+      - gridcell "1210.0"
+    - row "15 Contoso Water Heater 7.2GPM X1800 Green Home Appliances 1025567.5 663440.8000000002 0.6469011547265296 -98882.69999999984 -147264.0 741.0":
+      - gridcell "15"
+      - gridcell "Contoso Water Heater 7.2GPM X1800 Green":
+        - generic: Contoso Water Heater 7.2GPM X1800 Green
+      - gridcell "Home Appliances"
+      - gridcell "1025567.5"
+      - gridcell "663440.8000000002"
+      - gridcell "0.6469011547265296"
+      - gridcell "-98882.69999999984"
+      - gridcell "-147264.0"
+      - gridcell "741.0"
+    - row "16 Contoso Projector 1080p X981 Silver Computers 1016168.3700000003 659313.3000000002 0.6488228914269394 -44188.46999999974 -73995.3899999999 431.0":
+      - gridcell "16"
+      - gridcell "Contoso Projector 1080p X981 Silver"
+      - gridcell "Computers"
+      - gridcell "1016168.3700000003"
+      - gridcell "659313.3000000002"
+      - gridcell "0.6488228914269394"
+      - gridcell "-44188.46999999974"
+      - gridcell "-73995.3899999999"
+      - gridcell "431.0"
+    - row "17 Contoso Water Heater 7.2GPM X1800 Red Home Appliances 995536.5 646604.7000000001 0.649503760032907 -57151.39999999991 -87939.5 714.0":
+      - gridcell "17"
+      - gridcell "Contoso Water Heater 7.2GPM X1800 Red":
+        - generic: Contoso Water Heater 7.2GPM X1800 Red
+      - gridcell "Home Appliances"
+      - gridcell "995536.5"
+      - gridcell "646604.7000000001"
+      - gridcell "0.649503760032907"
+      - gridcell "-57151.39999999991"
+      - gridcell "-87939.5"
+      - gridcell "714.0"
+    - row "18 Contoso Water Heater 7.2GPM X1800 White Home Appliances 998825.75 646473.05 0.6472330634247265 -105299.19999999984 -161011.0 721.0":
+      - gridcell "18"
+      - gridcell "Contoso Water Heater 7.2GPM X1800 White":
+        - generic: Contoso Water Heater 7.2GPM X1800 White
+      - gridcell "Home Appliances"
+      - gridcell "998825.75"
+      - gridcell "646473.05"
+      - gridcell "0.6472330634247265"
+      - gridcell "-105299.19999999984"
+      - gridcell "-161011.0"
+      - gridcell "721.0"
+    - row "19 WWI Projector 1080p DLP86 White Computers 991903.0800000001 642499.74 0.6477444751961048 98459.21999999997 148965.39000000013 422.0":
+      - gridcell "19"
+      - gridcell "WWI Projector 1080p DLP86 White"
+      - gridcell "Computers"
+      - gridcell "991903.0800000001"
+      - gridcell "642499.74"
+      - gridcell "0.6477444751961048"
+      - gridcell "98459.21999999997"
+      - gridcell "148965.39000000013"
+      - gridcell "422.0"
+    - row "20 Proseware Projector 1080p LCD86 White Computers 943199.1000000001 612433.8 0.6493155050720468 60509.67000000004 91685.25 435.0":
+      - gridcell "20"
+      - gridcell "Proseware Projector 1080p LCD86 White":
+        - generic: Proseware Projector 1080p LCD86 White
+      - gridcell "Computers"
+      - gridcell "943199.1000000001"
+      - gridcell "612433.8"
+      - gridcell "0.6493155050720468"
+      - gridcell "60509.67000000004"
+      - gridcell "91685.25"
+      - gridcell "435.0"
+    - row "21 WWI Projector 1080p LCD86 White Computers 945654.7500000001 611087.55 0.6462057637842986 26087.250000000116 45096.75 440.0":
+      - gridcell "21"
+      - gridcell "WWI Projector 1080p LCD86 White"
+      - gridcell "Computers"
+      - gridcell "945654.7500000001"
+      - gridcell "611087.55"
+      - gridcell "0.6462057637842986"
+      - gridcell "26087.250000000116"
+      - gridcell "45096.75"
+      - gridcell "440.0"
+    - row "22 Proseware Projector 1080p LCD86 Silver Computers 933766.65 606042.8700000001 0.6490303225115184 101219.09999999998 150643.80000000005 431.0":
+      - gridcell "22"
+      - gridcell "Proseware Projector 1080p LCD86 Silver":
+        - generic: Proseware Projector 1080p LCD86 Silver
+      - gridcell "Computers"
+      - gridcell "933766.65"
+      - gridcell "606042.8700000001"
+      - gridcell "0.6490303225115184"
+      - gridcell "101219.09999999998"
+      - gridcell "150643.80000000005"
+      - gridcell "431.0"
+    - row "23 Contoso Water Heater 7.2GPM X1800 Silver Home Appliances 911948.25 593315.85 0.6506025424140021 -206925.90000000002 -325680.0 652.0":
+      - gridcell "23"
+      - gridcell "Contoso Water Heater 7.2GPM X1800 Silver":
+        - generic: Contoso Water Heater 7.2GPM X1800 Silver
+      - gridcell "Home Appliances"
+      - gridcell "911948.25"
+      - gridcell "593315.85"
+      - gridcell "0.6506025424140021"
+      - gridcell "-206925.90000000002"
+      - gridcell "-325680.0"
+      - gridcell "652.0"
+    - row "24 WWI Projector 1080p DLP86 Black Computers 916108.4099999999 593200.1099999999 0.6475217381750703 37983.86999999988 57027.17999999982 390.0":
+      - gridcell "24"
+      - gridcell "WWI Projector 1080p DLP86 Black"
+      - gridcell "Computers"
+      - gridcell "916108.4099999999"
+      - gridcell "593200.1099999999"
+      - gridcell "0.6475217381750703"
+      - gridcell "37983.86999999988"
+      - gridcell "57027.17999999982"
+      - gridcell "390.0"
+    - row "25 Proseware Projector 1080p DLP86 White Computers 917108.01 592543.77 0.6461003104748807 -71841.08999999997 -110755.68000000005 392.0":
+      - gridcell "25"
+      - gridcell "Proseware Projector 1080p DLP86 White":
+        - generic: Proseware Projector 1080p DLP86 White
+      - gridcell "Computers"
+      - gridcell "917108.01"
+      - gridcell "592543.77"
+      - gridcell "0.6461003104748807"
+      - gridcell "-71841.08999999997"
+      - gridcell "-110755.68000000005"
+      - gridcell "392.0"
+    - row "26 Contoso Water Heater 7.2GPM X1800 Blue Home Appliances 905089.5 586945.8 0.6484947621202103 -162480.09999999986 -248980.0 651.0":
+      - gridcell "26"
+      - gridcell "Contoso Water Heater 7.2GPM X1800 Blue":
+        - generic: Contoso Water Heater 7.2GPM X1800 Blue
+      - gridcell "Home Appliances"
+      - gridcell "905089.5"
+      - gridcell "586945.8"
+      - gridcell "0.6484947621202103"
+      - gridcell "-162480.09999999986"
+      - gridcell "-248980.0"
+      - gridcell "651.0"
+  - rowgroup
+  - rowgroup
+  - rowgroup
+- text:    
+- button "Previous page" [disabled]:
+- button "1":
+  - generic: "1"
+- button "2":
+  - generic: "2"
+- button "Go to page":
+  - generic: ...
+- button "51":
+  - generic: "51"
+- button "Next page":
+- button "2.517 rows":
+  - generic: 2.517 rows
+- link:
+  - /url: /019fb7c2-0139-75db-a781-a6d19adf4a2e/home
+- link "MarginOps | Inteligência Comercial e Rentabilidade":
+  - /url: /019fb7c2-0139-75db-a781-a6d19adf4a2e/app/MarginOps-Inteligncia-Comercial-e-Rentabilidade-034qivrUc5i5OGHBvR7b6o/5/01a19da0-2c0b-7662-b2f7-52162c4763a6
+- generic: Edited 5 min ago
+- generic: Anyone
