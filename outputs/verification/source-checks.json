@@ -1,0 +1,157 @@
+{
+  "status": "passed",
+  "checks": {
+    "currencyexchange_source_rows": 100450,
+    "customer_source_rows": 104990,
+    "date_source_rows": 4018,
+    "orderrows_source_rows": 2349091,
+    "orders_source_rows": 980666,
+    "product_source_rows": 2517,
+    "sales_source_rows": 2349091,
+    "store_source_rows": 74,
+    "orders_duplicate_keys": 0,
+    "customer_duplicate_keys": 0,
+    "product_duplicate_keys": 0,
+    "store_duplicate_keys": 0,
+    "sales_duplicate_rows": 0,
+    "orderrows_duplicate_rows": 0,
+    "joined_rows_and_orphans": [
+      2349091,
+      0,
+      0,
+      0
+    ],
+    "invalid_business_rows": 0,
+    "orders_rows_vs_sales_2025_reconciled": true,
+    "unmatched_or_different_fx": 0,
+    "independent_decimal_reconciliation_jan_2025": {
+      "rows": 34498,
+      "net_sales_usd": "27405893.71906",
+      "cogs_usd": "12072174.26000"
+    }
+  },
+  "year_summaries": {
+    "2024": {
+      "line_items": 393157,
+      "orders": 163695,
+      "units": 1235722,
+      "gross_sales_usd": "345543824.48000",
+      "net_sales_usd": "325037485.19560",
+      "cogs_usd": "143349791.62000",
+      "discounts_usd": "20506339.28440",
+      "gross_profit_usd": "181687693.57560",
+      "gross_margin": "0.5589745855505391049475864332"
+    },
+    "2025": {
+      "line_items": 388544,
+      "orders": 161802,
+      "units": 1222215,
+      "gross_sales_usd": "318731712.20200",
+      "net_sales_usd": "299946187.09960",
+      "cogs_usd": "131862649.08000",
+      "discounts_usd": "18785525.10240",
+      "gross_profit_usd": "168083538.01960",
+      "gross_margin": "0.5603789787925733948811947720"
+    }
+  },
+  "store_keys_sample": [
+    [
+      10,
+      1,
+      "Contoso Store Australian Capital Territory",
+      "AU"
+    ],
+    [
+      20,
+      2,
+      "Contoso Store Northern Territory",
+      "AU"
+    ],
+    [
+      30,
+      3,
+      "Contoso Store South Australia",
+      "AU"
+    ],
+    [
+      35,
+      3,
+      "Contoso Store South Australia",
+      "AU"
+    ]
+  ],
+  "online_store_keys": [
+    [
+      999999,
+      -1,
+      "Online store",
+      "--"
+    ]
+  ],
+  "countries": [
+    [
+      "AU",
+      "Australia"
+    ],
+    [
+      "CA",
+      "Canada"
+    ],
+    [
+      "FR",
+      "France"
+    ],
+    [
+      "DE",
+      "Germany"
+    ],
+    [
+      "IT",
+      "Italy"
+    ],
+    [
+      "NL",
+      "Netherlands"
+    ],
+    [
+      "GB",
+      "United Kingdom"
+    ],
+    [
+      "US",
+      "United States"
+    ]
+  ],
+  "categories": [
+    [
+      "Audio"
+    ],
+    [
+      "Cameras and camcorders"
+    ],
+    [
+      "Cell phones"
+    ],
+    [
+      "Computers"
+    ],
+    [
+      "Games and Toys"
+    ],
+    [
+      "Home Appliances"
+    ],
+    [
+      "Music, Movies and Audio Books"
+    ],
+    [
+      "TV and Video"
+    ]
+  ],
+  "customer_version_dates": [
+    104990,
+    "1980-01-01 00:00:00",
+    "2045-12-30 00:00:00"
+  ],
+  "currency_semantics": "Base prices and transaction costs are NOT multiplied by FX in the SQLBI generator. Consolidated metrics stay in base USD; source Engine.cs lines 272-277 and 516-532."
+}
