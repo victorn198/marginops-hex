@@ -1,0 +1,161 @@
+{
+  "dataset": "SQLBI Contoso 1M",
+  "synthetic": true,
+  "license": "MIT",
+  "source": "https://github.com/sql-bi/Contoso-Data-Generator-V2-Data/releases/tag/ready-to-use-data",
+  "source_archive_sha256": "bd145ebd7048435207cc981991712a2a13d1d4711840d46dda9c3cb44dae81ae",
+  "tables": {
+    "currencyexchange": {
+      "file": "currencyexchange.parquet",
+      "rows": 100450,
+      "bytes": 166667,
+      "sha256": "5e9dfab9eb0f150577cb788f0499e5cbf47882c37de1c02484a3c1013b473898",
+      "columns": [
+        "Date",
+        "FromCurrency",
+        "ToCurrency",
+        "Exchange"
+      ]
+    },
+    "customer": {
+      "file": "customer.parquet",
+      "rows": 104990,
+      "bytes": 1560589,
+      "sha256": "658c3c31b62d5c4c81b5c6c90585acb6ea22dc3d917f467c8fe0c9925c96d09a",
+      "columns": [
+        "CustomerKey",
+        "GeoAreaKey",
+        "StartDT",
+        "EndDT",
+        "Continent",
+        "City",
+        "StateFull",
+        "Country",
+        "CountryFull"
+      ]
+    },
+    "date": {
+      "file": "date.parquet",
+      "rows": 4018,
+      "bytes": 31969,
+      "sha256": "500ea6736ad49c4ba8c567c4e76197b3e2defc5e99a8ce8d89cd6fd99da8631a",
+      "columns": [
+        "Date",
+        "DateKey",
+        "Year",
+        "YearQuarter",
+        "YearQuarterNumber",
+        "Quarter",
+        "YearMonth",
+        "YearMonthShort",
+        "YearMonthNumber",
+        "Month",
+        "MonthShort",
+        "MonthNumber",
+        "DayofWeek",
+        "DayofWeekShort",
+        "DayofWeekNumber",
+        "WorkingDay",
+        "WorkingDayNumber"
+      ]
+    },
+    "orderrows": {
+      "file": "orderrows.parquet",
+      "rows": 2349091,
+      "bytes": 21546542,
+      "sha256": "79831d67c96e9e61de171f0698dc6ff0b997b7973bcdd8464d97035a4ac6b272",
+      "columns": [
+        "OrderKey",
+        "RowNumber",
+        "ProductKey",
+        "Quantity",
+        "UnitPrice",
+        "NetPrice",
+        "UnitCost"
+      ]
+    },
+    "orders": {
+      "file": "orders.parquet",
+      "rows": 980666,
+      "bytes": 5717960,
+      "sha256": "b9d59570a37d7e101a01c536105b8646aeb667dd14fd5b1d62ce05fcd14df08b",
+      "columns": [
+        "OrderKey",
+        "CustomerKey",
+        "StoreKey",
+        "DT",
+        "DeliveryDate",
+        "CurrencyCode"
+      ]
+    },
+    "product": {
+      "file": "product.parquet",
+      "rows": 2517,
+      "bytes": 37906,
+      "sha256": "a71c03379615b359fa4d57beaa838b93febfc0c4e9328b7e92cf738191dd2a6d",
+      "columns": [
+        "ProductKey",
+        "ProductCode",
+        "ProductName",
+        "Manufacturer",
+        "Brand",
+        "Color",
+        "WeightUnit",
+        "Weight",
+        "Cost",
+        "Price",
+        "CategoryKey",
+        "CategoryName",
+        "SubCategoryKey",
+        "SubCategoryName"
+      ]
+    },
+    "sales": {
+      "file": "sales.parquet",
+      "rows": 2349091,
+      "bytes": 29151324,
+      "sha256": "fe9d0198e3456d6d35a901e1f32f0f2a199396e26d7bcbe5d93e204f3ca0fbfb",
+      "columns": [
+        "OrderKey",
+        "LineNumber",
+        "OrderDate",
+        "DeliveryDate",
+        "CustomerKey",
+        "StoreKey",
+        "ProductKey",
+        "Quantity",
+        "UnitPrice",
+        "NetPrice",
+        "UnitCost",
+        "CurrencyCode",
+        "ExchangeRate"
+      ]
+    },
+    "store": {
+      "file": "store.parquet",
+      "rows": 74,
+      "bytes": 4483,
+      "sha256": "b1dfebb2b7601318a96de43d0208ae1f0467eda7a61a4d0b86f67629846e29c3",
+      "columns": [
+        "StoreKey",
+        "StoreCode",
+        "GeoAreaKey",
+        "CountryCode",
+        "CountryName",
+        "State",
+        "OpenDate",
+        "CloseDate",
+        "Description",
+        "SquareMeters",
+        "Status"
+      ]
+    }
+  },
+  "coverage": {
+    "start": "2016-05-18",
+    "end": "2025-12-31",
+    "orders": 980666,
+    "active_customer_keys": 86908
+  },
+  "customer_projection": "Unneeded identity and address-like columns removed, although upstream customers are fictional."
+}
