@@ -1,0 +1,17 @@
+Independent review checkpoints for the build you are completing. Continue finishing the native app, then use these checks before the final clean-kernel execution. Do not replace the immutable acquisition snapshot eb9985f.
+
+Reference outputs from separately executed source checks:
+https://raw.githubusercontent.com/victorn198/marginops-hex/6af579b/outputs/verification/source-checks.json
+https://raw.githubusercontent.com/victorn198/marginops-hex/6af579b/outputs/verification/decision-checks.json
+
+For the default selection 2025/all markets/all categories, independently recomputed source totals are: 388544 line items; 161802 distinct orders; 1222215 units; gross sales USD 318731712.20200; net sales USD 299946187.09960; COGS USD 131862649.08000; discounts USD 18785525.10240; gross profit USD 168083538.01960. Gross margin is the ratio of the last gross profit to net sales. The normalized orders+orderrows representation reconciles exactly. CustomerKey, ProductKey, StoreKey, OrderKey are unique in their respective dimensions/header, and the line grains are unique. All many-to-one joins preserve 2349091 sales rows with zero orphans. The Online store has StoreKey=999999 and StoreCode=-1; physical StoreCode can have historical versions, so join on StoreKey.
+
+The full 2024->2025 revenue delta is -25091298.096 USD. The independent symmetric 3-factor Shapley reference yields volume -3433776.773854494, mix -21779029.80293572, price +121508.480790138 (all sum to the delta within a cent). Carry observed prices to the zero-volume side for entering/exiting products; report this convention and call this arithmetic attribution rather than causality.
+
+Scenario check: additional discount 5%, cost inflation 10%, assumed volume uplift 15% produces net sales 327691209.406313, COGS 166806251.0862, gross profit 160884958.320113, delta gross profit -7198579.699487 USD. Required assumed uplift to preserve the original gross profit under the 5%/10% scenario is 20.14551934553%. A 0/0/0 scenario must reproduce baseline exactly. Required uplift can exceed the slider's maximum and should remain visible rather than be clipped.
+
+In the separate forecast reference, the 52-week seasonal baseline outperformed a fixed ridge autoregression over six 4-week rolling origins. The baseline WAPE was 0.044445795700167705 and MAE 264526.50720583345 USD; ridge WAPE 0.08683039203793111. Your ridge features may legitimately differ, but the seasonal baseline must be calculated correctly, tested with the same horizons, and allowed to win. Preserve complete-week boundaries (last complete source week starts 2025-12-22), past-only normalization and recursive forecast lags. Do not select a more complex model merely for appearance.
+
+Customer SCD caveat: the source has 104990 distinct CustomerKeys and historical start/end dates, but our published projection has no separate persistent natural/person identity. Define the cohort customer as CustomerKey, explicitly label this record-level convention, and disclose that retention is not guaranteed deduplicated at physical-person level across SCD versions. Do not invent a natural key from demographics or addresses. If cohorts ignore the category filter, state that prominently on the cohort tab so users understand its scope.
+
+Please remove temporary scratch/test cells before handoff, include a compact narrative of the business finding and the verified limitations, and report actual completed features and any remaining gaps. Leave publication to my review.

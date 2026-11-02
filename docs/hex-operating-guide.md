@@ -18,6 +18,8 @@ MCP e CLI oficiais estão documentados para Team/Enterprise. O CLI não tem supo
 
 ## Publicação e continuidade
 
+Foi verificada na interface a opção `Anyone with the link` do compartilhamento deste projeto, ainda sem selecioná-la durante a construção. O trabalho ocorre no projeto nativo de notebook/Classic App para preservar células, parâmetros, indicadores, pivôs e layout auditável. A documentação atual também oferece Generative Apps e Hex 4.0, com interfaces geradas em código; essa alternativa não substitui a validação dos cálculos. Context Studio e Evals são documentados para Team/Enterprise e não foram ativados no Community.
+
 1. Confirmar as alterações desejadas do agente e retirar células temporárias.
 2. Reiniciar o kernel e executar tudo, conferindo resultados e memória.
 3. Testar combinações de filtros e cenários e conferir os componentes apresentados.
@@ -43,3 +45,8 @@ MCP e CLI oficiais estão documentados para Team/Enterprise. O CLI não tem supo
 - https://learn.hex.tech/docs/api-integrations/mcp-server
 - https://learn.hex.tech/docs/api-integrations/cli
 - https://hex.tech/pricing/
+- https://learn.hex.tech/docs/share-insights/apps/generative-apps
+- https://learn.hex.tech/docs/hex-4-0/what-is-hex-4-0
+- https://learn.hex.tech/docs/agent-management/context-studio
+- https://learn.hex.tech/docs/agent-management/evals
+- https://learn.hex.tech/docs/agent-management/governed-mode
