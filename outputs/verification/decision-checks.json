@@ -1,0 +1,172 @@
+{
+  "status": "passed",
+  "decomposition": {
+    "baseline_year": 2024,
+    "current_year": 2025,
+    "revenue_delta_usd": -25091298.096000016,
+    "effects_usd": {
+      "volume": -3433776.7738544936,
+      "mix": -21779029.80293572,
+      "price": 121508.48079013823
+    },
+    "reconciliation_error_usd": -5.960464477539063e-08,
+    "method": "Symmetric Shapley across aggregate units, product unit shares and average net unit prices; all 6 permutations."
+  },
+  "scenario_cases": [
+    {
+      "additional_discount_pct": 0,
+      "cost_inflation_pct": 0,
+      "assumed_volume_uplift_pct": 0,
+      "net_sales_usd": "299946187.09960",
+      "cogs_usd": "131862649.08000",
+      "gross_profit_usd": "168083538.01960",
+      "delta_gross_profit_usd": "0.00000",
+      "required_volume_uplift": "0"
+    },
+    {
+      "additional_discount_pct": 5,
+      "cost_inflation_pct": 10,
+      "assumed_volume_uplift_pct": 15,
+      "net_sales_usd": "327691209.406313000",
+      "cogs_usd": "166806251.08620000",
+      "gross_profit_usd": "160884958.320113000",
+      "delta_gross_profit_usd": "-7198579.699487000",
+      "required_volume_uplift": "0.201455193455304713181713621"
+    },
+    {
+      "additional_discount_pct": 20,
+      "cost_inflation_pct": 25,
+      "assumed_volume_uplift_pct": 50,
+      "net_sales_usd": "359935424.5195200",
+      "cogs_usd": "247242467.02500000",
+      "gross_profit_usd": "112692957.49452000",
+      "delta_gross_profit_usd": "-55390580.52508000",
+      "required_volume_uplift": "1.237276513411765551485295567"
+    }
+  ],
+  "forecast_reference": {
+    "complete_week_count": 501,
+    "first_week": "2016-05-23",
+    "last_week": "2025-12-22",
+    "scores": {
+      "ridge_recursive": {
+        "wape": 0.08683039203793111,
+        "mae_usd": 516785.44535586884,
+        "origins": 6,
+        "weeks_tested": 24
+      },
+      "seasonal_naive_52w": {
+        "wape": 0.044445795700167705,
+        "mae_usd": 264526.50720583345,
+        "origins": 6,
+        "weeks_tested": 24
+      }
+    },
+    "best_on_historical_wape": "seasonal_naive_52w",
+    "next_four_weeks_usd": [
+      7249907.28816,
+      6014206.54834,
+      6071157.13738,
+      5509352.90828
+    ],
+    "validation": "6 non-overlapping rolling origins; 4-week recursive horizon; fixed alpha; training and scaling use only past observations; no future actual lags. Historical comparison, not guaranteed future accuracy.",
+    "folds": [
+      {
+        "origin": "2025-07-07",
+        "first_test_week": "2025-07-14",
+        "model": "ridge_recursive",
+        "absolute_error_sum": 3722143.354083569,
+        "actual_sum": 18373450.50836,
+        "n": 4
+      },
+      {
+        "origin": "2025-07-07",
+        "first_test_week": "2025-07-14",
+        "model": "seasonal_naive_52w",
+        "absolute_error_sum": 2026458.326340001,
+        "actual_sum": 18373450.50836,
+        "n": 4
+      },
+      {
+        "origin": "2025-08-04",
+        "first_test_week": "2025-08-11",
+        "model": "ridge_recursive",
+        "absolute_error_sum": 978556.3807923896,
+        "actual_sum": 23717434.77992,
+        "n": 4
+      },
+      {
+        "origin": "2025-08-04",
+        "first_test_week": "2025-08-11",
+        "model": "seasonal_naive_52w",
+        "absolute_error_sum": 488785.4214200005,
+        "actual_sum": 23717434.77992,
+        "n": 4
+      },
+      {
+        "origin": "2025-09-01",
+        "first_test_week": "2025-09-08",
+        "model": "ridge_recursive",
+        "absolute_error_sum": 1090019.9866887294,
+        "actual_sum": 23827946.918700002,
+        "n": 4
+      },
+      {
+        "origin": "2025-09-01",
+        "first_test_week": "2025-09-08",
+        "model": "seasonal_naive_52w",
+        "absolute_error_sum": 444297.23065999895,
+        "actual_sum": 23827946.918700002,
+        "n": 4
+      },
+      {
+        "origin": "2025-09-29",
+        "first_test_week": "2025-10-06",
+        "model": "ridge_recursive",
+        "absolute_error_sum": 809824.8344090693,
+        "actual_sum": 23861713.69656,
+        "n": 4
+      },
+      {
+        "origin": "2025-09-29",
+        "first_test_week": "2025-10-06",
+        "model": "seasonal_naive_52w",
+        "absolute_error_sum": 873290.6108999997,
+        "actual_sum": 23861713.69656,
+        "n": 4
+      },
+      {
+        "origin": "2025-10-27",
+        "first_test_week": "2025-11-03",
+        "model": "ridge_recursive",
+        "absolute_error_sum": 1402341.7448317725,
+        "actual_sum": 24617749.6202,
+        "n": 4
+      },
+      {
+        "origin": "2025-10-27",
+        "first_test_week": "2025-11-03",
+        "model": "seasonal_naive_52w",
+        "absolute_error_sum": 1112699.9171600007,
+        "actual_sum": 24617749.6202,
+        "n": 4
+      },
+      {
+        "origin": "2025-11-24",
+        "first_test_week": "2025-12-01",
+        "model": "ridge_recursive",
+        "absolute_error_sum": 4399964.387735322,
+        "actual_sum": 28441675.567519996,
+        "n": 4
+      },
+      {
+        "origin": "2025-11-24",
+        "first_test_week": "2025-12-01",
+        "model": "seasonal_naive_52w",
+        "absolute_error_sum": 1403104.6664600018,
+        "actual_sum": 28441675.567519996,
+        "n": 4
+      }
+    ]
+  }
+}
