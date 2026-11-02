@@ -47,6 +47,15 @@
     "interactive_demos": 6,
     "local_browser_embed_passed": true,
     "existing_signalpath_switch_passed": true,
-    "no_horizontal_overflow_at_tested_viewport": true
+    "no_horizontal_overflow_at_tested_viewport": true,
+    "public_pages_http_200": 4,
+    "public_browser_embed_passed": true
+  },
+  "published_manual_scenario_5_10_15": {
+    "gross_profit_million_usd": 160.9,
+    "net_sales_million_usd": 327.7,
+    "gross_profit_delta_million_usd": -7.2,
+    "required_volume_pct": 20.1,
+    "narrative_matches": true
   }
 }

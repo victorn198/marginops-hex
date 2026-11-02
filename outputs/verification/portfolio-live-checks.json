@@ -1,0 +1,25 @@
+{
+  "portfolio_commit": "1ebc4d5537953b26e898bb3d6aadb239eadb09f5",
+  "pages": [
+    {
+      "page": "/",
+      "status": 200,
+      "marginops": true
+    },
+    {
+      "page": "en/",
+      "status": 200,
+      "marginops": true
+    },
+    {
+      "page": "recrutador/",
+      "status": 200,
+      "marginops": true
+    },
+    {
+      "page": "en/recruiter/",
+      "status": 200,
+      "marginops": true
+    }
+  ]
+}
