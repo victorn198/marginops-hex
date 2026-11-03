@@ -1,0 +1,141 @@
+- button:
+- link:
+  - /url: /019fb7c2-0139-75db-a781-a6d19adf4a2e/home
+- button "Just now":
+  - generic: Just now
+- button:
+- button:
+- button "Edit":
+  - generic: Edit
+- button "Share":
+  - generic: Share
+- button:
+- button "Open agent":
+- generic: Visão executiva
+- generic: Motores de resultado
+- generic: Clientes e coortes
+- generic: Previsão e validação
+- generic: Simulador de margem
+- generic: Qualidade e metodologia
+- button:
+- iframe:
+  - banner:
+    - generic: Inteligência comercial e rentabilidade
+    - generic: MarginOps
+    - paragraph: Receita, composição de vendas e clientes — do desempenho histórico às decisões de margem.
+    - generic: 2,35 milhões de registros
+    - generic: 980.666 pedidos
+    - generic: 8 tabelas relacionadas
+    - generic: Contoso · empresa fictícia
+    - generic: USD · 2016–2025
+    - generic: Por Victor Nogueira
+  - paragraph:
+    - strong: "Explore:"
+    - text: selecione o recorte abaixo e pressione
+    - strong: Run
+    - text: para atualizar as análises. Os cenários são hipóteses; a base é sintética.
+- button:
+- iframe:
+  - generic: "01"
+  - heading "Visão executiva" [level=2]
+  - paragraph: Receita e lucro bruto na comparação com o ano anterior completo. Valores em USD.
+  - generic: Ano 2024
+  - generic: "Mercado: Todos"
+  - generic: "Categoria: Todas"
+  - region "Indicadores comerciais":
+    - article:
+      - generic: Receita líquida
+      - generic: US$ 325,0 mi
+      - generic: −27,7% vs 2023
+      - generic: 2023 · US$ 449,5 mi
+    - article:
+      - generic: Lucro bruto
+      - generic: US$ 181,7 mi
+      - generic: −27,7% vs 2023
+      - generic: 2023 · US$ 251,3 mi
+    - article:
+      - generic: Margem bruta
+      - generic: 55,9%
+      - generic: −0,01 p.p. vs 2023
+      - generic: 2023 · 55,9%
+    - article:
+      - generic: Pedidos distintos
+      - generic: "163.695"
+      - generic: −16,6% vs 2023
+      - generic: 2023 · 196.237
+    - article:
+      - generic: Ticket médio
+      - generic: US$ 1.986
+      - generic: −13,3% vs 2023
+      - generic: 2023 · US$ 2.291
+- button:
+- button:
+- generic "Ano"
+- button "2024":
+  - generic: "2024"
+- button:
+- generic "Mercado (país do cliente)"
+- button "Todos":
+  - generic: Todos
+- button:
+- generic "Categoria"
+- button "Todas":
+  - generic: Todas
+- button:
+- generic "Resumo executivo (app)"
+- heading "Leitura do recorte atual" [level=3]:
+  - text: Leitura do recorte atual
+  - link:
+    - /url: "#leitura-do-recorte-atual"
+- paragraph:
+  - strong: "Ano 2024 · Mercado: Todos · Categoria: Todas"
+- list:
+  - listitem: Receita líquida recuou −27,7% vs 2023 (USD 325,0 mi); o lucro bruto acompanhou na mesma direção (−27,7%). Margem bruta 55,9% (−1 p.b. vs 2023).
+  - listitem: "Pedidos distintos: 163.695 (−16,6%); ticket médio USD 1.986; desconto médio 5,9% da receita bruta."
+  - text: "Por categoria: pior variação de lucro bruto em"
+  - strong: Computers
+  - text: (−USD 35,8 mi); melhor variação em
+  - strong: Games and Toys
+  - text: (−USD 196.201).
+  - text: "Por mercado: pior variação de lucro bruto em"
+  - strong: United States
+  - text: (−USD 45,6 mi); melhor variação em
+  - strong: Italy
+  - text: (−USD 1,2 mi).
+  - text: "Por canal: pior variação de lucro bruto em"
+  - strong: Loja física
+  - text: (−USD 43,4 mi); melhor variação em
+  - strong: Online
+  - text: (−USD 26,3 mi).
+  - listitem: "Leitura: variações descrevem o histórico do recorte; não são efeitos causais nem ganhos garantidos."
+- button:
+- button:
+- generic "Receita líquida e lucro bruto por mês — ano selecionado vs anterior"
+- generic "Vega visualization"
+- generic: Série
+- generic: Lucro bruto 2023
+- generic: Lucro bruto 2024
+- generic: Receita líquida 2023
+- generic: Receita líquida 2024
+- button:
+- button:
+- generic "Variação do lucro bruto por categoria vs ano anterior"
+- generic "Vega visualization"
+- button:
+- button:
+- generic "Variação do lucro bruto por mercado vs ano anterior"
+- generic "Vega visualization"
+- button "Run":
+  - generic: Run
+- button:
+- combobox "Filter..." [expanded] [active]
+- listbox "selectable options":
+  - menuitem "2023":
+    - radio "2023"
+    - text: "2023"
+  - menuitem "2024":
+    - radio "2024" [checked]
+    - text: "2024"
+  - menuitem "2025":
+    - radio "2025"
+    - text: "2025"

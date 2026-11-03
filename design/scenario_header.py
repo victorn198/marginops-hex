@@ -1,0 +1,1 @@
+_mx_section("05", "Simulador de margem", "Configure desconto, custo e volume; pressione Run para calcular. Hipóteses separadas dos fatos históricos. A base segue os filtros da Visão executiva.", escopo_txt)

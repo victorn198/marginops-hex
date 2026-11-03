@@ -41,3 +41,9 @@ Os dados de publicação estão em `data/published/`. As tabelas são lidas de f
 - [Dataset original](https://github.com/sql-bi/Contoso-Data-Generator-V2-Data/releases/tag/ready-to-use-data)
 - [Gerador e regras dos valores](https://github.com/sql-bi/Contoso-Data-Generator-V2/blob/main/DatabaseGenerator/Engine.cs)
 - [Formato nativo e importação do Hex](https://learn.hex.tech/docs/explore-data/projects/import-export)
+
+## Apresentação visual
+
+A revisão visual usa cabeçalhos em azul profundo, indicadores comparativos com o ano anterior, cartões responsivos e estilos de gráficos coerentes entre abas. As tabelas terminais de previsão e validação usam nomes de negócio e valores arredondados somente na apresentação; os dataframes analíticos mantêm sua precisão.
+
+As referências e os componentes de apresentação estão em `design/`. Esses arquivos representam as células alteradas nesta revisão, não um export completo do projeto Hex. O layout, os filtros, o pivot, as tabelas, o botão Run e a publicação continuam nativos. Nenhum tema pago foi ativado.

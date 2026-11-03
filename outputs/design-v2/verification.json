@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "date": "2026-11-02",
+  "app": "https://app.hex.tech/019fb7c2-0139-75db-a781-a6d19adf4a2e/app/034qivrUc5i5OGHBvR7b6o/latest",
+  "fresh_publish_preview": "completed_without_errors",
+  "public_quality_rows_true": 45,
+  "public_quality_rows_false": 0,
+  "reference_checks": 21,
+  "integrity_checks": 24,
+  "public_2024_filter": "verified_then_restored_2025",
+  "public_2025_cards": {
+    "revenue_usd_million": 299.9,
+    "gross_profit_usd_million": 168.1,
+    "gross_margin_pct": 56.0,
+    "orders": 161802,
+    "margin_change_pp": 0.14
+  },
+  "forecast_table": "chronological_dates_and_Brazilian_number_display_verified",
+  "manual_run_preserved": true,
+  "portfolio_embed": "native_Hex_rendered_with_cards_and_six_project_tabs",
+  "portfolio_pages_commit": "000c84ab3e208e5ef0a360d3f416edd1838d95bc",
+  "portfolio_pages_build": "built",
+  "limits": [
+    "Community plan: no paid global custom theme enabled",
+    "Display-source backup includes changed cells only; not a full native YAML export",
+    "Synthetic dataset; scenario premises and forecast limitations unchanged"
+  ]
+}

@@ -1,0 +1,169 @@
+- button:
+- link:
+  - /url: /019fb7c2-0139-75db-a781-a6d19adf4a2e/home
+- button "Just now":
+  - generic: Just now
+- button:
+- button:
+- button "Edit":
+  - generic: Edit
+- button "Share":
+  - generic: Share
+- button:
+- button "Open agent":
+- generic: Visão executiva
+- generic: Motores de resultado
+- generic: Clientes e coortes
+- generic [active]: Previsão e validação
+- generic: Simulador de margem
+- generic: Qualidade e metodologia
+- button:
+- iframe:
+  - generic: "04"
+  - heading "Previsão e validação" [level=2]
+  - paragraph: Quatro semanas à frente. Compare o erro do modelo com uma referência sazonal no mesmo teste temporal.
+  - generic: Ano 2025
+  - generic: "Mercado: Todos"
+  - generic: "Categoria: Todas"
+- button:
+- generic "KPI WAPE ridge"
+- generic: 8,6%
+- generic "WAPE ridge AR (validação)"
+- button:
+- generic "KPI WAPE baseline"
+- generic: 4,4%
+- generic "WAPE sazonal ingênuo 52s (validação)"
+- button:
+- generic "20. Gráfico de previsão e validação"
+- iframe:
+  - toolbar:
+    - button "Download plot as a PNG":
+    - button "Zoom":
+    - button "Pan":
+    - button "Box Select":
+    - button "Lasso Select":
+    - button "Zoom in":
+    - button "Zoom out":
+    - button "Autoscale":
+    - button "Reset axes":
+    - link "plotly-logomark":
+      - /url: https://plotly.com/
+      - img "plotly-logomark"
+- button:
+- button:
+- generic "21. Tabela de previsão (4 semanas)"
+- treegrid:
+  - rowgroup:
+    - row "Semana Modelo (USD) Referência sazonal (USD)":
+      - columnheader: 
+      - columnheader "Semana":
+        - text: 
+        - button "Semana":
+          - generic "Semana":
+            - text: Semana
+      - columnheader "Modelo (USD)":
+        - text: 
+        - button "Modelo (USD)":
+          - generic "Modelo (USD)":
+            - text: Modelo (USD)
+      - columnheader "Referência sazonal (USD)":
+        - text: 
+        - button "Referência sazonal (USD)":
+          - generic "Referência sazonal (USD)":
+            - text: Referência sazonal (USD)
+      - columnheader: 
+  - rowgroup:
+    - row "0 29/12/2025 7.945.153,24 7.249.907,29":
+      - gridcell "0"
+      - gridcell "29/12/2025"
+      - gridcell "7.945.153,24"
+      - gridcell "7.249.907,29"
+      - gridcell
+    - row "1 05/01/2026 7.405.320,10 6.014.206,55":
+      - gridcell "1"
+      - gridcell "05/01/2026"
+      - gridcell "7.405.320,10"
+      - gridcell "6.014.206,55"
+      - gridcell
+    - row "2 12/01/2026 6.969.053,05 6.071.157,14":
+      - gridcell "2"
+      - gridcell "12/01/2026"
+      - gridcell "6.969.053,05"
+      - gridcell "6.071.157,14"
+      - gridcell
+    - row "3 19/01/2026 6.541.202,12 5.509.352,91":
+      - gridcell "3"
+      - gridcell "19/01/2026"
+      - gridcell "6.541.202,12"
+      - gridcell "5.509.352,91"
+      - gridcell
+  - rowgroup
+  - rowgroup
+  - rowgroup
+- text:    
+- button "4 rows":
+  - generic: 4 rows
+- button:
+- button:
+- generic "22. Métricas de validação (WAPE/MAE)"
+- treegrid:
+  - rowgroup:
+    - row "Modelo WAPE (%) Erro absoluto médio (USD)":
+      - columnheader: 
+      - columnheader "Modelo":
+        - text: 
+        - button "Modelo":
+          - generic "Modelo":
+            - text: Modelo
+      - columnheader "WAPE (%)":
+        - text: 
+        - button "WAPE (%)":
+          - generic "WAPE (%)":
+            - text: WAPE (%)
+      - columnheader "Erro absoluto médio (USD)":
+        - text: 
+        - button "Erro absoluto médio (USD)":
+          - generic "Erro absoluto médio (USD)":
+            - text: Erro absoluto médio (USD)
+      - columnheader: 
+  - rowgroup:
+    - row "0 Sazonal ingênuo (52 semanas) 4.44 264526.51":
+      - gridcell "0"
+      - gridcell "Sazonal ingênuo (52 semanas)"
+      - gridcell "4.44"
+      - gridcell "264526.51"
+      - gridcell
+    - row "1 Ridge autorregressivo 8.63 513433.65":
+      - gridcell "1"
+      - gridcell "Ridge autorregressivo"
+      - gridcell "8.63"
+      - gridcell "513433.65"
+      - gridcell
+  - rowgroup
+  - rowgroup
+  - rowgroup
+- text:    
+- button "2 rows":
+  - generic: 2 rows
+- button:
+- generic "Nota de previsão"
+- paragraph:
+  - strong: Resultado da validação.
+  - text: "6 origens × 4 semanas. WAPE ridge AR = 8,6% · WAPE sazonal ingênuo = 4,4%. Menor erro neste recorte:"
+  - strong: Sazonal ingênuo (52 semanas)
+  - text: — a referência simples venceu o modelo.
+- paragraph:
+  - strong: Método.
+  - text: Série de receita líquida semanal (segunda a domingo), apenas semanas completas até o corte.
+  - emphasis: Ridge autorregressivo
+  - text: "em numpy com λ fixo = 1: log(1+receita) das 4 semanas anteriores, média dessas 4, valor de 52 semanas antes, termos de calendário (seno/cosseno da semana do ano, 2 harmônicos) e tendência; features padronizadas só com dados de treino. Em cada origem o modelo é re-treinado apenas com o passado e prevê 4 semanas"
+  - strong: recursivamente
+  - text: (semanas 2–4 usam lags previstos, nunca valores reais futuros).
+  - emphasis: Referência sazonal ingênua
+  - text: ": valor da mesma semana 52 semanas antes (fallback: último valor observado se não houver 52 semanas). WAPE = Σ|erro| / Σ|real|; MAE em USD."
+- paragraph:
+  - strong: Limites.
+  - text: Sem intervalos de confiança formais, sem efeitos causais e sem pretensão de uso em produção; com 24 pontos de validação, diferenças pequenas de WAPE não são conclusivas.
+- button "Run":
+  - generic: Run
+- button:

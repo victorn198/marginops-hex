@@ -1,0 +1,129 @@
+- button:
+- link:
+  - /url: /019fb7c2-0139-75db-a781-a6d19adf4a2e/home
+- button "Just now":
+  - generic: Just now
+- button:
+- button:
+- button "Edit":
+  - generic: Edit
+- button "Share":
+  - generic: Share
+- button:
+- button "Open agent":
+- generic: Visão executiva
+- generic: Motores de resultado
+- generic: Clientes e coortes
+- generic: Previsão e validação
+- generic: Simulador de margem
+- generic: Qualidade e metodologia
+- button:
+- iframe:
+  - banner:
+    - generic: Inteligência comercial e rentabilidade
+    - generic: MarginOps
+    - paragraph: Receita, composição de vendas e clientes — do desempenho histórico às decisões de margem.
+    - generic: 2,35 milhões de registros
+    - generic: 980.666 pedidos
+    - generic: 8 tabelas relacionadas
+    - generic: Contoso · empresa fictícia
+    - generic: USD · 2016–2025
+    - generic: Por Victor Nogueira
+  - paragraph:
+    - strong: "Explore:"
+    - text: selecione o recorte abaixo e pressione
+    - strong: Run
+    - text: para atualizar as análises. Os cenários são hipóteses; a base é sintética.
+- button:
+- iframe:
+  - generic: "01"
+  - heading "Visão executiva" [level=2]
+  - paragraph: Receita e lucro bruto na comparação com o ano anterior completo. Valores em USD.
+  - generic: Ano 2025
+  - generic: "Mercado: Todos"
+  - generic: "Categoria: Todas"
+  - region "Indicadores comerciais":
+    - article:
+      - generic: Receita líquida
+      - generic: US$ 299,9 mi
+      - generic: −7,7% vs 2024
+      - generic: 2024 · US$ 325,0 mi
+    - article:
+      - generic: Lucro bruto
+      - generic: US$ 168,1 mi
+      - generic: −7,5% vs 2024
+      - generic: 2024 · US$ 181,7 mi
+    - article:
+      - generic: Margem bruta
+      - generic: 56,0%
+      - generic: +0,14 p.p. vs 2024
+      - generic: 2024 · 55,9%
+    - article:
+      - generic: Pedidos distintos
+      - generic: "161.802"
+      - generic: −1,2% vs 2024
+      - generic: 2024 · 163.695
+    - article:
+      - generic: Ticket médio
+      - generic: US$ 1.854
+      - generic: −6,6% vs 2024
+      - generic: 2024 · US$ 1.986
+- button:
+- generic "Ano"
+- button "2025":
+  - generic: "2025"
+- button:
+- generic "Mercado (país do cliente)"
+- button "Todos":
+  - generic: Todos
+- button:
+- generic "Categoria"
+- button "Todas":
+  - generic: Todas
+- button:
+- generic "Resumo executivo (app)"
+- heading "Leitura do recorte atual" [level=3]:
+  - text: Leitura do recorte atual
+  - link:
+    - /url: "#leitura-do-recorte-atual"
+- paragraph:
+  - strong: "Ano 2025 · Mercado: Todos · Categoria: Todas"
+- list:
+  - listitem: Receita líquida recuou −7,7% vs 2024 (USD 299,9 mi); o lucro bruto acompanhou na mesma direção (−7,5%). Margem bruta 56,0% (+14 p.b. vs 2024).
+  - listitem: "Pedidos distintos: 161.802 (−1,2%); ticket médio USD 1.854; desconto médio 5,9% da receita bruta."
+  - text: "Por categoria: pior variação de lucro bruto em"
+  - strong: TV and Video
+  - text: (−USD 8,5 mi); melhor variação em
+  - strong: Cameras and camcorders
+  - text: (USD 3,3 mi).
+  - text: "Por mercado: pior variação de lucro bruto em"
+  - strong: United States
+  - text: (−USD 18,0 mi); melhor variação em
+  - strong: Germany
+  - text: (USD 3,2 mi).
+  - text: "Por canal: pior variação de lucro bruto em"
+  - strong: Online
+  - text: (−USD 17,3 mi); melhor variação em
+  - strong: Loja física
+  - text: (USD 3,7 mi).
+  - listitem: "Leitura: variações descrevem o histórico do recorte; não são efeitos causais nem ganhos garantidos."
+- button:
+- button:
+- generic "Receita líquida e lucro bruto por mês — ano selecionado vs anterior"
+- generic "Vega visualization"
+- generic: Série
+- generic: Lucro bruto 2024
+- generic: Lucro bruto 2025
+- generic: Receita líquida 2024
+- generic: Receita líquida 2025
+- button:
+- button:
+- generic "Variação do lucro bruto por categoria vs ano anterior"
+- generic "Vega visualization"
+- button:
+- button:
+- generic "Variação do lucro bruto por mercado vs ano anterior"
+- generic "Vega visualization"
+- button "Run":
+  - generic: Run
+- button:

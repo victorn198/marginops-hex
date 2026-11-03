@@ -1,0 +1,1 @@
+_mx_section("03", "Clientes e coortes", "Aquisição observada e recompra por CustomerKey (registro histórico, sem deduplicação garantida por pessoa). Categoria não se aplica a esta aba.", f"Ano de corte: {ano} · Mercado: {mercado}")
