@@ -47,3 +47,9 @@ Os dados de publicação estão em `data/published/`. As tabelas são lidas de f
 A revisão visual usa cabeçalhos em azul profundo, indicadores comparativos com o ano anterior, cartões responsivos e estilos de gráficos coerentes entre abas. As tabelas terminais de previsão e validação usam nomes de negócio e valores arredondados somente na apresentação; os dataframes analíticos mantêm sua precisão.
 
 As referências e os componentes de apresentação estão em `design/`. Esses arquivos representam as células alteradas nesta revisão, não um export completo do projeto Hex. O layout, os filtros, o pivot, as tabelas, o botão Run e a publicação continuam nativos. Nenhum tema pago foi ativado.
+
+## Layout compacto (03/11/2026)
+
+As seis abas foram reorganizadas para priorizar a leitura em tela de notebook. A visão executiva apresenta os filtros antes de cinco indicadores pequenos, série mensal e variações por categoria e mercado lado a lado. Os gráficos principais têm 230–300 px de altura, com hover, zoom e legenda interativa. Os componentes são saídas Python/HTML do próprio Hex, ligadas aos dataframes e figuras existentes.
+
+As explicações e verificações podem ser expandidas. O pivot, as tabelas de produtos e recompra e a auditoria de arquivos permanecem nativos como detalhe; essas áreas podem exigir rolagem. Os controles de filtro, sliders e Run continuam nativos. `design/compact/` contém apenas a composição da apresentação; os cálculos analíticos não foram substituídos.

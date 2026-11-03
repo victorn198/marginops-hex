@@ -1,0 +1,34 @@
+{
+  "date": "2026-11-03",
+  "scope": "All six existing Hex app tabs; compact layout in same public app",
+  "fresh_publish_run": "completed without errors",
+  "quality": {
+    "integrity_passed": 24,
+    "reference_passed": 21,
+    "failures": 0,
+    "manifest_counts_passed": 8
+  },
+  "overview": {
+    "old_native_chart_height_px": 650,
+    "new_chart_height_px": 290,
+    "new_combined_panel_height_px": 504,
+    "native_filter_row_height_px": 51,
+    "layout": "five compact KPIs and three charts in one row"
+  },
+  "other_tabs": "motors/cohorts/forecast/scenario/quality inspected in published app",
+  "interaction_test": "2024 selection + Run produced revenue USD325.0m and 163695 orders with matching chart/heading year",
+  "preserved": [
+    "SQL and calculation cells",
+    "native scope controls and scenario sliders",
+    "manual Run",
+    "native pivot and product/cohort detail tables",
+    "source-file audit"
+  ],
+  "portfolio_commit": "c80037717a60617522a20b6f6e450ca845138963",
+  "portfolio_pages": "built",
+  "limitations": [
+    "Detail tables and narrower viewports may require scrolling.",
+    "Screenshots cover 1440x900 and1280x720 desktop presentations; no claim of universal one-screen fit.",
+    "The directory contains changed presentation cells, not a full native Hex YAML export."
+  ]
+}

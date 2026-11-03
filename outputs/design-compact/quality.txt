@@ -1,0 +1,206 @@
+- button:
+- link:
+  - /url: /019fb7c2-0139-75db-a781-a6d19adf4a2e/home
+- button "2m ago":
+  - generic: 2m ago
+- button:
+- button:
+- button "Edit":
+  - generic: Edit
+- button "Share":
+  - generic: Share
+- button:
+- button "Open agent":
+- generic: Visão executiva
+- generic: Motores de resultado
+- generic: Clientes e coortes
+- generic: Previsão e validação
+- generic: Simulador de margem
+- generic [active]: Qualidade e metodologia
+- button:
+- iframe:
+  - main:
+    - heading "Qualidade e metodologia" [level=2]
+    - generic: Contoso · empresa fictícia · preços e custos em USD
+    - article:
+      - generic: Integridade
+      - generic: "24"
+      - generic: 24 verificações
+    - article:
+      - generic: Referências numéricas
+      - generic: "21"
+      - generic: 21 verificações no recorte
+    - article:
+      - generic: Falhas
+      - generic: "0"
+      - generic: Execução interrompe em divergências
+    - generic "Inspecionar verificações de integridade"
+    - generic "Inspecionar comparações de referência"
+    - generic "Fonte, dicionário de métricas e metodologia"
+- button:
+- button:
+- generic "27. Arquivos, checksums e contagens vs manifesto"
+- treegrid:
+  - rowgroup:
+    - row "tabela arquivo linhas_manifesto linhas_lidas contagem_ok bytes sha256 hash_ok origem_arquivo":
+      - columnheader: 
+      - columnheader "tabela":
+        - text: 
+        - button "tabela":
+          - generic "tabela":
+            - text: tabela
+      - columnheader "arquivo":
+        - text: 
+        - button "arquivo":
+          - generic "arquivo":
+            - text: arquivo
+      - columnheader "linhas_manifesto":
+        - text: 
+        - button "linhas_manifesto":
+          - generic "linhas_manifesto":
+            - text: linhas_manifesto
+      - columnheader "linhas_lidas":
+        - text: 
+        - button "linhas_lidas":
+          - generic "linhas_lidas":
+            - text: linhas_lidas
+      - columnheader "contagem_ok":
+        - text: 
+        - button "contagem_ok":
+          - generic "contagem_ok":
+            - text: contagem_ok
+      - columnheader "bytes":
+        - text: 
+        - button "bytes":
+          - generic "bytes":
+            - text: bytes
+      - columnheader "sha256":
+        - text: 
+        - button "sha256":
+          - generic "sha256":
+            - text: sha256
+      - columnheader "hash_ok":
+        - text: 
+        - button "hash_ok":
+          - generic "hash_ok":
+            - text: hash_ok
+      - columnheader "origem_arquivo":
+        - text: 
+        - button "origem_arquivo":
+          - generic "origem_arquivo":
+            - text: origem_arquivo
+      - columnheader: 
+  - rowgroup:
+    - row "0 sales sales.parquet 2349091 2349091 True 29151324 fe9d0198e3456d6d35a901e1f32f0f2a199396e26d7bcbe5d93e204f3ca0fbfb True download":
+      - gridcell "0"
+      - gridcell "sales"
+      - gridcell "sales.parquet"
+      - gridcell "2349091"
+      - gridcell "2349091"
+      - gridcell "True"
+      - gridcell "29151324"
+      - gridcell "fe9d0198e3456d6d35a901e1f32f0f2a199396e26d7bcbe5d93e204f3ca0fbfb":
+        - generic: fe9d0198e3456d6d35a901e1f32f0f2a199396e26d7bcbe5d93e204f3ca0fbfb
+      - gridcell "True"
+      - gridcell "download"
+      - gridcell
+    - row "1 orderrows orderrows.parquet 2349091 2349091 True 21546542 79831d67c96e9e61de171f0698dc6ff0b997b7973bcdd8464d97035a4ac6b272 True download":
+      - gridcell "1"
+      - gridcell "orderrows"
+      - gridcell "orderrows.parquet"
+      - gridcell "2349091"
+      - gridcell "2349091"
+      - gridcell "True"
+      - gridcell "21546542"
+      - gridcell "79831d67c96e9e61de171f0698dc6ff0b997b7973bcdd8464d97035a4ac6b272":
+        - generic: 79831d67c96e9e61de171f0698dc6ff0b997b7973bcdd8464d97035a4ac6b272
+      - gridcell "True"
+      - gridcell "download"
+      - gridcell
+    - row "2 orders orders.parquet 980666 980666 True 5717960 b9d59570a37d7e101a01c536105b8646aeb667dd14fd5b1d62ce05fcd14df08b True download":
+      - gridcell "2"
+      - gridcell "orders"
+      - gridcell "orders.parquet"
+      - gridcell "980666"
+      - gridcell "980666"
+      - gridcell "True"
+      - gridcell "5717960"
+      - gridcell "b9d59570a37d7e101a01c536105b8646aeb667dd14fd5b1d62ce05fcd14df08b":
+        - generic: b9d59570a37d7e101a01c536105b8646aeb667dd14fd5b1d62ce05fcd14df08b
+      - gridcell "True"
+      - gridcell "download"
+      - gridcell
+    - row "3 customer customer.parquet 104990 104990 True 1560589 658c3c31b62d5c4c81b5c6c90585acb6ea22dc3d917f467c8fe0c9925c96d09a True download":
+      - gridcell "3"
+      - gridcell "customer"
+      - gridcell "customer.parquet"
+      - gridcell "104990"
+      - gridcell "104990"
+      - gridcell "True"
+      - gridcell "1560589"
+      - gridcell "658c3c31b62d5c4c81b5c6c90585acb6ea22dc3d917f467c8fe0c9925c96d09a":
+        - generic: 658c3c31b62d5c4c81b5c6c90585acb6ea22dc3d917f467c8fe0c9925c96d09a
+      - gridcell "True"
+      - gridcell "download"
+      - gridcell
+    - row "4 currencyexchange currencyexchange.parquet 100450 100450 True 166667 5e9dfab9eb0f150577cb788f0499e5cbf47882c37de1c02484a3c1013b473898 True download":
+      - gridcell "4"
+      - gridcell "currencyexchange"
+      - gridcell "currencyexchange.parquet"
+      - gridcell "100450"
+      - gridcell "100450"
+      - gridcell "True"
+      - gridcell "166667"
+      - gridcell "5e9dfab9eb0f150577cb788f0499e5cbf47882c37de1c02484a3c1013b473898":
+        - generic: 5e9dfab9eb0f150577cb788f0499e5cbf47882c37de1c02484a3c1013b473898
+      - gridcell "True"
+      - gridcell "download"
+      - gridcell
+    - row "5 product product.parquet 2517 2517 True 37906 a71c03379615b359fa4d57beaa838b93febfc0c4e9328b7e92cf738191dd2a6d True download":
+      - gridcell "5"
+      - gridcell "product"
+      - gridcell "product.parquet"
+      - gridcell "2517"
+      - gridcell "2517"
+      - gridcell "True"
+      - gridcell "37906"
+      - gridcell "a71c03379615b359fa4d57beaa838b93febfc0c4e9328b7e92cf738191dd2a6d":
+        - generic: a71c03379615b359fa4d57beaa838b93febfc0c4e9328b7e92cf738191dd2a6d
+      - gridcell "True"
+      - gridcell "download"
+      - gridcell
+    - row "6 date date.parquet 4018 4018 True 31969 500ea6736ad49c4ba8c567c4e76197b3e2defc5e99a8ce8d89cd6fd99da8631a True download":
+      - gridcell "6"
+      - gridcell "date"
+      - gridcell "date.parquet"
+      - gridcell "4018"
+      - gridcell "4018"
+      - gridcell "True"
+      - gridcell "31969"
+      - gridcell "500ea6736ad49c4ba8c567c4e76197b3e2defc5e99a8ce8d89cd6fd99da8631a":
+        - generic: 500ea6736ad49c4ba8c567c4e76197b3e2defc5e99a8ce8d89cd6fd99da8631a
+      - gridcell "True"
+      - gridcell "download"
+      - gridcell
+    - row "7 store store.parquet 74 74 True 4483 b1dfebb2b7601318a96de43d0208ae1f0467eda7a61a4d0b86f67629846e29c3 True download":
+      - gridcell "7"
+      - gridcell "store"
+      - gridcell "store.parquet"
+      - gridcell "74"
+      - gridcell "74"
+      - gridcell "True"
+      - gridcell "4483"
+      - gridcell "b1dfebb2b7601318a96de43d0208ae1f0467eda7a61a4d0b86f67629846e29c3":
+        - generic: b1dfebb2b7601318a96de43d0208ae1f0467eda7a61a4d0b86f67629846e29c3
+      - gridcell "True"
+      - gridcell "download"
+      - gridcell
+  - rowgroup
+  - rowgroup
+  - rowgroup
+- text:    
+- button "8 rows":
+  - generic: 8 rows
+- button "Run":
+  - generic: Run
+- button:

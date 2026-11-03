@@ -1,0 +1,64 @@
+- button:
+- link:
+  - /url: /019fb7c2-0139-75db-a781-a6d19adf4a2e/home
+- button "Just now":
+  - generic: Just now
+- button:
+- button:
+- button "Edit":
+  - generic: Edit
+- button "Share":
+  - generic: Share
+- button:
+- button "Open agent":
+- generic: Visão executiva
+- generic: Motores de resultado
+- generic: Clientes e coortes
+- generic: Previsão e validação
+- generic: Simulador de margem
+- generic: Qualidade e metodologia
+- button:
+- generic "Ano"
+- button "2025":
+  - generic: "2025"
+- button:
+- generic "Mercado (país do cliente)"
+- button "Todos":
+  - generic: Todos
+- button:
+- generic "Categoria"
+- button "Todas":
+  - generic: Todas
+- button:
+- iframe:
+  - main:
+    - heading "MarginOps · visão executiva" [level=2]
+    - generic: "Ano 2025 · Mercado: Todos · Categoria: Todas"
+    - article:
+      - generic: Receita líquida
+      - generic: US$ 299,9 mi
+      - generic: "-7,7% vs 2024"
+    - article:
+      - generic: Lucro bruto
+      - generic: US$ 168,1 mi
+      - generic: "-7,5% vs 2024"
+    - article:
+      - generic: Margem bruta
+      - generic: 56,0%
+      - generic: +0,14 p.p. vs 2024
+    - article:
+      - generic: Pedidos
+      - generic: "161.802"
+      - generic: "-1,2% vs 2024"
+    - article:
+      - generic: Ticket médio
+      - generic: US$ 1.854
+      - generic: "-6,6% vs 2024"
+    - heading "Receita e lucro bruto · meses" [level=3]
+    - heading "Δ lucro bruto · categorias" [level=3]
+    - heading "Δ lucro bruto · mercados" [level=3]
+    - generic: "Contoso · dados sintéticos · valores em USD. Pontilhado: ano anterior. Selecione o recorte acima e pressione Run."
+    - generic "Leitura detalhada do recorte"
+- button "Run":
+  - generic: Run
+- button:

@@ -1,0 +1,447 @@
+- text: Publish app
+- button "App preview":
+  - generic: App preview
+- button "Notebook diff":
+  - generic: Notebook diff
+- button:
+- button:
+- button:
+- generic: Visão executiva
+- generic: Motores de resultado
+- generic: Clientes e coortes
+- generic: Previsão e validação
+- generic: Simulador de margem
+- generic: Qualidade e metodologia
+- iframe [active]:
+  - main:
+    - heading "Qualidade e metodologia" [level=2]
+    - generic: Contoso · empresa fictícia · preços e custos em USD
+    - article:
+      - generic: Integridade
+      - generic: "24"
+      - generic: 24 verificações
+    - article:
+      - generic: Referências numéricas
+      - generic: "21"
+      - generic: 21 verificações no recorte
+    - article:
+      - generic: Falhas
+      - generic: "0"
+      - generic: Execução interrompe em divergências
+    - generic "Inspecionar verificações de integridade"
+    - table:
+      - rowgroup:
+        - row "verificacao valor esperado ok":
+          - columnheader "verificacao"
+          - columnheader "valor"
+          - columnheader "esperado"
+          - columnheader "ok"
+      - rowgroup:
+        - row "Linhas sales 2349091.0 2349091.0 True":
+          - cell "Linhas sales"
+          - cell "2349091.0"
+          - cell "2349091.0"
+          - cell "True"
+        - row "Pedidos distintos em sales 980666.0 980666.0 True":
+          - cell "Pedidos distintos em sales"
+          - cell "980666.0"
+          - cell "980666.0"
+          - cell "True"
+        - row "PK duplicada sales (OrderKey+LineNumber) 0.0 0.0 True":
+          - cell "PK duplicada sales (OrderKey+LineNumber)"
+          - cell "0.0"
+          - cell "0.0"
+          - cell "True"
+        - row "PK duplicada orderrows (OrderKey+RowNumber) 0.0 0.0 True":
+          - cell "PK duplicada orderrows (OrderKey+RowNumber)"
+          - cell "0.0"
+          - cell "0.0"
+          - cell "True"
+        - row "PK duplicada orders (OrderKey) 0.0 0.0 True":
+          - cell "PK duplicada orders (OrderKey)"
+          - cell "0.0"
+          - cell "0.0"
+          - cell "True"
+        - row "PK duplicada customer 0.0 0.0 True":
+          - cell "PK duplicada customer"
+          - cell "0.0"
+          - cell "0.0"
+          - cell "True"
+        - row "PK duplicada product 0.0 0.0 True":
+          - cell "PK duplicada product"
+          - cell "0.0"
+          - cell "0.0"
+          - cell "True"
+        - row "PK duplicada store 0.0 0.0 True":
+          - cell "PK duplicada store"
+          - cell "0.0"
+          - cell "0.0"
+          - cell "True"
+        - row "PK duplicada date 0.0 0.0 True":
+          - cell "PK duplicada date"
+          - cell "0.0"
+          - cell "0.0"
+          - cell "True"
+        - row "Órfãos sales→customer 0.0 0.0 True":
+          - cell "Órfãos sales→customer"
+          - cell "0.0"
+          - cell "0.0"
+          - cell "True"
+        - row "Órfãos sales→product 0.0 0.0 True":
+          - cell "Órfãos sales→product"
+          - cell "0.0"
+          - cell "0.0"
+          - cell "True"
+        - row "Órfãos sales→store 0.0 0.0 True":
+          - cell "Órfãos sales→store"
+          - cell "0.0"
+          - cell "0.0"
+          - cell "True"
+        - row "Órfãos sales→date 0.0 0.0 True":
+          - cell "Órfãos sales→date"
+          - cell "0.0"
+          - cell "0.0"
+          - cell "True"
+        - row "Órfãos orderrows→orders 0.0 0.0 True":
+          - cell "Órfãos orderrows→orders"
+          - cell "0.0"
+          - cell "0.0"
+          - cell "True"
+        - row "Linhas sales após joins dimensionais 2349091.0 2349091.0 True":
+          - cell "Linhas sales após joins dimensionais"
+          - cell "2349091.0"
+          - cell "2349091.0"
+          - cell "True"
+        - row "Linhas orderrows+orders 2349091.0 2349091.0 True":
+          - cell "Linhas orderrows+orders"
+          - cell "2349091.0"
+          - cell "2349091.0"
+          - cell "True"
+        - row "Linhas sem par sales vs orderrows 0.0 0.0 True":
+          - cell "Linhas sem par sales vs orderrows"
+          - cell "0.0"
+          - cell "0.0"
+          - cell "True"
+        - row "Linhas com atributo divergente sales vs orders+orderrows 0.0 0.0 True":
+          - cell "Linhas com atributo divergente sales vs orders+orderrows"
+          - cell "0.0"
+          - cell "0.0"
+          - cell "True"
+        - row "Diferença receita líquida sales − (orders+orderrows), USD 0.0 0.0 True":
+          - cell "Diferença receita líquida sales − (orders+orderrows), USD"
+          - cell "0.0"
+          - cell "0.0"
+          - cell "True"
+        - row "Diferença receita bruta sales − (orders+orderrows), USD 0.0 0.0 True":
+          - cell "Diferença receita bruta sales − (orders+orderrows), USD"
+          - cell "0.0"
+          - cell "0.0"
+          - cell "True"
+        - row "Diferença CPV sales − (orders+orderrows), USD 0.0 0.0 True":
+          - cell "Diferença CPV sales − (orders+orderrows), USD"
+          - cell "0.0"
+          - cell "0.0"
+          - cell "True"
+        - row "Linhas com NetPrice > UnitPrice 0.0 0.0 True":
+          - cell "Linhas com NetPrice > UnitPrice"
+          - cell "0.0"
+          - cell "0.0"
+          - cell "True"
+        - row "Linhas com quantidade ≤ 0 0.0 0.0 True":
+          - cell "Linhas com quantidade ≤ 0"
+          - cell "0.0"
+          - cell "0.0"
+          - cell "True"
+        - row "Linhas com entrega antes do pedido 0.0 0.0 True":
+          - cell "Linhas com entrega antes do pedido"
+          - cell "0.0"
+          - cell "0.0"
+          - cell "True"
+    - generic "Inspecionar comparações de referência" [active]
+    - table:
+      - rowgroup:
+        - row "verificacao obtido referencia tolerancia ok":
+          - columnheader "verificacao"
+          - columnheader "obtido"
+          - columnheader "referencia"
+          - columnheader "tolerancia"
+          - columnheader "ok"
+      - rowgroup:
+        - row "Linhas 2025 3.885440e+05 3.885440e+05 5.000000e-01 True":
+          - cell "Linhas 2025"
+          - cell "3.885440e+05"
+          - cell "3.885440e+05"
+          - cell "5.000000e-01"
+          - cell "True"
+        - row "Pedidos distintos 2025 1.618020e+05 1.618020e+05 5.000000e-01 True":
+          - cell "Pedidos distintos 2025"
+          - cell "1.618020e+05"
+          - cell "1.618020e+05"
+          - cell "5.000000e-01"
+          - cell "True"
+        - row "Unidades 2025 1.222215e+06 1.222215e+06 5.000000e-01 True":
+          - cell "Unidades 2025"
+          - cell "1.222215e+06"
+          - cell "1.222215e+06"
+          - cell "5.000000e-01"
+          - cell "True"
+        - row "Receita bruta 2025 3.187317e+08 3.187317e+08 1.000000e-02 True":
+          - cell "Receita bruta 2025"
+          - cell "3.187317e+08"
+          - cell "3.187317e+08"
+          - cell "1.000000e-02"
+          - cell "True"
+        - row "Receita líquida 2025 2.999462e+08 2.999462e+08 1.000000e-02 True":
+          - cell "Receita líquida 2025"
+          - cell "2.999462e+08"
+          - cell "2.999462e+08"
+          - cell "1.000000e-02"
+          - cell "True"
+        - row "CPV 2025 1.318626e+08 1.318626e+08 1.000000e-02 True":
+          - cell "CPV 2025"
+          - cell "1.318626e+08"
+          - cell "1.318626e+08"
+          - cell "1.000000e-02"
+          - cell "True"
+        - row "Descontos 2025 1.878553e+07 1.878553e+07 1.000000e-02 True":
+          - cell "Descontos 2025"
+          - cell "1.878553e+07"
+          - cell "1.878553e+07"
+          - cell "1.000000e-02"
+          - cell "True"
+        - row "Lucro bruto 2025 1.680835e+08 1.680835e+08 1.000000e-02 True":
+          - cell "Lucro bruto 2025"
+          - cell "1.680835e+08"
+          - cell "1.680835e+08"
+          - cell "1.000000e-02"
+          - cell "True"
+        - 'row "Cenário 5/10/15: receita 3.276912e+08 3.276912e+08 1.000000e-02 True"':
+          - 'cell "Cenário 5/10/15: receita"'
+          - cell "3.276912e+08"
+          - cell "3.276912e+08"
+          - cell "1.000000e-02"
+          - cell "True"
+        - 'row "Cenário 5/10/15: CPV 1.668063e+08 1.668063e+08 1.000000e-02 True"':
+          - 'cell "Cenário 5/10/15: CPV"'
+          - cell "1.668063e+08"
+          - cell "1.668063e+08"
+          - cell "1.000000e-02"
+          - cell "True"
+        - 'row "Cenário 5/10/15: lucro bruto 1.608850e+08 1.608850e+08 1.000000e-02 True"':
+          - 'cell "Cenário 5/10/15: lucro bruto"'
+          - cell "1.608850e+08"
+          - cell "1.608850e+08"
+          - cell "1.000000e-02"
+          - cell "True"
+        - 'row "Cenário 5/10/15: Δ lucro bruto -7.198580e+06 -7.198580e+06 1.000000e-02 True"':
+          - 'cell "Cenário 5/10/15: Δ lucro bruto"'
+          - cell "-7.198580e+06"
+          - cell "-7.198580e+06"
+          - cell "1.000000e-02"
+          - cell "True"
+        - row "Volume necessário 5/10 (%) 2.014552e+01 2.014552e+01 1.000000e-08 True":
+          - cell "Volume necessário 5/10 (%)"
+          - cell "2.014552e+01"
+          - cell "2.014552e+01"
+          - cell "1.000000e-08"
+          - cell "True"
+        - row "Cenário 0/0/0 = base (Δ lucro) 0.000000e+00 0.000000e+00 1.000000e-06 True":
+          - cell "Cenário 0/0/0 = base (Δ lucro)"
+          - cell "0.000000e+00"
+          - cell "0.000000e+00"
+          - cell "1.000000e-06"
+          - cell "True"
+        - row "Shapley volume -3.433777e+06 -3.433777e+06 1.000000e-02 True":
+          - cell "Shapley volume"
+          - cell "-3.433777e+06"
+          - cell "-3.433777e+06"
+          - cell "1.000000e-02"
+          - cell "True"
+        - row "Shapley mix -2.177903e+07 -2.177903e+07 1.000000e-02 True":
+          - cell "Shapley mix"
+          - cell "-2.177903e+07"
+          - cell "-2.177903e+07"
+          - cell "1.000000e-02"
+          - cell "True"
+        - row "Shapley preço 1.215085e+05 1.215085e+05 1.000000e-02 True":
+          - cell "Shapley preço"
+          - cell "1.215085e+05"
+          - cell "1.215085e+05"
+          - cell "1.000000e-02"
+          - cell "True"
+        - row "Δ receita 2024→2025 -2.509130e+07 -2.509130e+07 1.000000e-02 True":
+          - cell "Δ receita 2024→2025"
+          - cell "-2.509130e+07"
+          - cell "-2.509130e+07"
+          - cell "1.000000e-02"
+          - cell "True"
+        - row "WAPE sazonal ingênuo 4.444580e-02 4.444580e-02 1.000000e-12 True":
+          - cell "WAPE sazonal ingênuo"
+          - cell "4.444580e-02"
+          - cell "4.444580e-02"
+          - cell "1.000000e-12"
+          - cell "True"
+        - row "MAE sazonal ingênuo 2.645265e+05 2.645265e+05 1.000000e-06 True":
+          - cell "MAE sazonal ingênuo"
+          - cell "2.645265e+05"
+          - cell "2.645265e+05"
+          - cell "1.000000e-06"
+          - cell "True"
+        - row "Última semana completa (início) 1.000000e+00 1.000000e+00 0.000000e+00 True":
+          - cell "Última semana completa (início)"
+          - cell "1.000000e+00"
+          - cell "1.000000e+00"
+          - cell "0.000000e+00"
+          - cell "True"
+    - generic "Fonte, dicionário de métricas e metodologia"
+- button:
+- generic "27. Arquivos, checksums e contagens vs manifesto"
+- treegrid:
+  - rowgroup:
+    - row "tabela arquivo linhas_manifesto linhas_lidas contagem_ok bytes sha256":
+      - columnheader: 
+      - columnheader "tabela":
+        - text: 
+        - button "tabela":
+          - generic "tabela":
+            - text: tabela
+      - columnheader "arquivo":
+        - text: 
+        - button "arquivo":
+          - generic "arquivo":
+            - text: arquivo
+      - columnheader "linhas_manifesto":
+        - text: 
+        - button "linhas_manifesto":
+          - generic "linhas_manifesto":
+            - text: linhas_manifesto
+      - columnheader "linhas_lidas":
+        - text: 
+        - button "linhas_lidas":
+          - generic "linhas_lidas":
+            - text: linhas_lidas
+      - columnheader "contagem_ok":
+        - text: 
+        - button "contagem_ok":
+          - generic "contagem_ok":
+            - text: contagem_ok
+      - columnheader "bytes":
+        - text: 
+        - button "bytes":
+          - generic "bytes":
+            - text: bytes
+      - columnheader "sha256":
+        - text: 
+        - button "sha256":
+          - generic "sha256":
+            - text: sha256
+  - rowgroup:
+    - row "0 sales sales.parquet 2349091 2349091 True 29151324 fe9d0198e3456d6d35a901e1f32f0f2a199396e26d7bcbe5d93e204f3ca0fbfb":
+      - gridcell "0"
+      - gridcell "sales"
+      - gridcell "sales.parquet"
+      - gridcell "2349091"
+      - gridcell "2349091"
+      - gridcell "True"
+      - gridcell "29151324"
+      - gridcell "fe9d0198e3456d6d35a901e1f32f0f2a199396e26d7bcbe5d93e204f3ca0fbfb":
+        - generic: fe9d0198e3456d6d35a901e1f32f0f2a199396e26d7bcbe5d93e204f3ca0fbfb
+    - row "1 orderrows orderrows.parquet 2349091 2349091 True 21546542 79831d67c96e9e61de171f0698dc6ff0b997b7973bcdd8464d97035a4ac6b272":
+      - gridcell "1"
+      - gridcell "orderrows"
+      - gridcell "orderrows.parquet"
+      - gridcell "2349091"
+      - gridcell "2349091"
+      - gridcell "True"
+      - gridcell "21546542"
+      - gridcell "79831d67c96e9e61de171f0698dc6ff0b997b7973bcdd8464d97035a4ac6b272":
+        - generic: 79831d67c96e9e61de171f0698dc6ff0b997b7973bcdd8464d97035a4ac6b272
+    - row "2 orders orders.parquet 980666 980666 True 5717960 b9d59570a37d7e101a01c536105b8646aeb667dd14fd5b1d62ce05fcd14df08b":
+      - gridcell "2"
+      - gridcell "orders"
+      - gridcell "orders.parquet"
+      - gridcell "980666"
+      - gridcell "980666"
+      - gridcell "True"
+      - gridcell "5717960"
+      - gridcell "b9d59570a37d7e101a01c536105b8646aeb667dd14fd5b1d62ce05fcd14df08b":
+        - generic: b9d59570a37d7e101a01c536105b8646aeb667dd14fd5b1d62ce05fcd14df08b
+    - row "3 customer customer.parquet 104990 104990 True 1560589 658c3c31b62d5c4c81b5c6c90585acb6ea22dc3d917f467c8fe0c9925c96d09a":
+      - gridcell "3"
+      - gridcell "customer"
+      - gridcell "customer.parquet"
+      - gridcell "104990"
+      - gridcell "104990"
+      - gridcell "True"
+      - gridcell "1560589"
+      - gridcell "658c3c31b62d5c4c81b5c6c90585acb6ea22dc3d917f467c8fe0c9925c96d09a":
+        - generic: 658c3c31b62d5c4c81b5c6c90585acb6ea22dc3d917f467c8fe0c9925c96d09a
+    - row "4 currencyexchange currencyexchange.parquet 100450 100450 True 166667 5e9dfab9eb0f150577cb788f0499e5cbf47882c37de1c02484a3c1013b473898":
+      - gridcell "4"
+      - gridcell "currencyexchange"
+      - gridcell "currencyexchange.parquet"
+      - gridcell "100450"
+      - gridcell "100450"
+      - gridcell "True"
+      - gridcell "166667"
+      - gridcell "5e9dfab9eb0f150577cb788f0499e5cbf47882c37de1c02484a3c1013b473898":
+        - generic: 5e9dfab9eb0f150577cb788f0499e5cbf47882c37de1c02484a3c1013b473898
+    - row "5 product product.parquet 2517 2517 True 37906 a71c03379615b359fa4d57beaa838b93febfc0c4e9328b7e92cf738191dd2a6d":
+      - gridcell "5"
+      - gridcell "product"
+      - gridcell "product.parquet"
+      - gridcell "2517"
+      - gridcell "2517"
+      - gridcell "True"
+      - gridcell "37906"
+      - gridcell "a71c03379615b359fa4d57beaa838b93febfc0c4e9328b7e92cf738191dd2a6d":
+        - generic: a71c03379615b359fa4d57beaa838b93febfc0c4e9328b7e92cf738191dd2a6d
+    - row "6 date date.parquet 4018 4018 True 31969 500ea6736ad49c4ba8c567c4e76197b3e2defc5e99a8ce8d89cd6fd99da8631a":
+      - gridcell "6"
+      - gridcell "date"
+      - gridcell "date.parquet"
+      - gridcell "4018"
+      - gridcell "4018"
+      - gridcell "True"
+      - gridcell "31969"
+      - gridcell "500ea6736ad49c4ba8c567c4e76197b3e2defc5e99a8ce8d89cd6fd99da8631a":
+        - generic: 500ea6736ad49c4ba8c567c4e76197b3e2defc5e99a8ce8d89cd6fd99da8631a
+    - row "7 store store.parquet 74 74 True 4483 b1dfebb2b7601318a96de43d0208ae1f0467eda7a61a4d0b86f67629846e29c3":
+      - gridcell "7"
+      - gridcell "store"
+      - gridcell "store.parquet"
+      - gridcell "74"
+      - gridcell "74"
+      - gridcell "True"
+      - gridcell "4483"
+      - gridcell "b1dfebb2b7601318a96de43d0208ae1f0467eda7a61a4d0b86f67629846e29c3":
+        - generic: b1dfebb2b7601318a96de43d0208ae1f0467eda7a61a4d0b86f67629846e29c3
+  - rowgroup
+  - rowgroup
+  - rowgroup
+- text:    
+- button "8 rows":
+  - generic: 8 rows
+- button "App run settings Show advanced":
+  - generic: App run settings
+  - generic: Show advanced
+- generic: Auto-refresh published results
+- checkbox [checked]
+- generic: Automatically refresh published results when a user runs the app, or when results are stale.
+- generic: "Mark app results as stale if older than:"
+- button "24 hours":
+  - generic: 24 hours
+- text: Version details
+- button "Compare":
+  - generic: Compare
+- textbox "Provide an optional description for your version"
+- text: Replacing Version
+- 'generic "Acabamento visual: títulos dos gráficos ajustados para evitar cortes e escala âmbar no volume necessário do simulador. Execução completa sem erros; cálculos e filtros preservados."'
+- generic "Mon Nov 02 2026 22:45:15 GMT-0300": 9 hrs ago
+- button "View":
+  - generic: View
+- button "Request review" [disabled]:
+  - generic: Request review
+- button "Publish app":
+  - generic: Publish app
+- button:
